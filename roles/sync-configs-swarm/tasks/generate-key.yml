@@ -1,0 +1,78 @@
+
+# gitlab vars
+deployer_user: ansible
+deployer_group: user
+deployer_user_ssh_key_file: .ssh/id_rsa #.ssh/id_rsa
+deployer_gitlab_api: https://gitlab.nexdev.net/api/v4
+deployer_gitlab_token: zpsbdxdyfXrUfxyFpVq3
+deployer_gitlab_key_title: "{{ ansible_hostname }}_deployer"
+
+####################
+- name: Make sure deployer user has ssh key
+  user:
+    name: '{{ deployer_user }}'
+    generate_ssh_key: yes
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: "Check if GitLab has this user's SSH key"
+  uri:
+    url: "{{ deployer_gitlab_api }}/user/keys"
+    method: GET
+    status_code: [200]
+    headers:
+      private-token: "{{ deployer_gitlab_token }}"
+      Content-Type: "application/json"
+  register: user_ssh_keys
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: Assign ssh key to a variable
+  shell:
+    cat /home/{{ deployer_user }}/{{ deployer_user_ssh_key_file }}.pub
+  register: deployer_user_public_key
+  when: not user_ssh_keys.json | selectattr('title', 'equalto', deployer_gitlab_key_title) | list | length > 0
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: Push the generated ssh key to the GitLab instance
+  uri:
+      url: "{{ deployer_gitlab_api }}/user/keys"
+      method: POST
+      status_code: [201, 400]
+      headers:
+        private-token: "{{ deployer_gitlab_token }}"
+        Content-Type: "application/json"
+      body: >
+        {
+          "title": "{{ deployer_gitlab_key_title }}", 
+          "key": "{{ deployer_user_public_key.stdout_lines.0 }}"
+        }
+      body_format: json
+  when: not user_ssh_keys.json | selectattr('title', 'equalto', deployer_gitlab_key_title) | list | length > 0
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: Ensure .ssh/config file exists
+  file: state=touch path="/home/{{ deployer_user }}/.ssh/config"
+  when: not user_ssh_keys.json | selectattr('title', 'equalto', deployer_gitlab_key_title) | list | length > 0
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: Disable host key checking
+  lineinfile: dest=/home/{{ deployer_user }}/.ssh/config line='Host *\n \tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null'
+  when: not user_ssh_keys.json | selectattr('title', 'equalto', deployer_gitlab_key_title) | list | length > 0
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: Add deploy group to sudoers file and validate
+  lineinfile: dest=/etc/sudoers state=present regexp='^%{{ deployer_group }}' line='%{{ deployer_group }} ALL=(ALL) NOPASSWD:ALL' validate="visudo -cf %s"
+  become: yes
+  run_once: true
+  delegate_to: localhost
