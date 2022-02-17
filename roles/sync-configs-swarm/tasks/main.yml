@@ -80,7 +80,6 @@
     - "haproxy-legion"
     - "haproxy-nex3"
     - "haproxy-nexops"
-  ignore_errors: yes
 
 - name: Build HAProxy configurations
   assemble:
@@ -97,7 +96,6 @@
   become: yes
   with_items:
     - whitelisted.ips
-  #ignore_errors: yes
 
 - name: Copy SSL Certs configuration {{ env }}
   when: env == "local" or env == "local_test"
@@ -114,7 +112,6 @@
     src: "/srv/{{team}}/haproxy-{{item}}/configs/{{ env }}/maps/{{item}}.map"
     dest: "{{ volume_path }}/{{item}}.map"
   become: yes
-  #ignore_errors: yes
   with_items:
     - "rome"
     - "olympus"
