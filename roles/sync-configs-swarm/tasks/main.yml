@@ -137,7 +137,7 @@
 
 - name: Copy special map configuration {{ env }} {{team}}
   copy:
-    src: "/srv/{{team}}/compiled/tmp/{{ env }}/special-maps/*"
+    src: "/srv/{{team}}/compiled/tmp/{{ env }}/special-maps/"
     dest: "{{ volume_path }}/maps"
   become: yes
 
