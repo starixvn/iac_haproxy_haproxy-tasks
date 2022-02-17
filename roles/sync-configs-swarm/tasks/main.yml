@@ -40,6 +40,7 @@
     - "nexus"
     - "spu"
     - "legion"
+    - "nex3"
   when: team == "nexcel"
 ###Lumi
 - name: Checkout source code {{team}}
@@ -69,7 +70,15 @@
     src: "/srv/{{team}}/*/configs/{{ env }}"
     dest: "{{ volume_path }}/configs"
   become: yes
-  #ignore_errors: yes
+  with_items:
+    - "default"
+    - "rome"
+    - "olympus"
+    - "nexus"
+    - "spu"
+    - "legion"
+    - "nex3"
+  ignore_errors: yes
 
 - name: Build HAProxy configurations
   assemble:
