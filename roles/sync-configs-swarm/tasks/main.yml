@@ -109,17 +109,17 @@
 
 - name: Copy custom configuration {{ env }} {{team}}
   template:
-    src: "/srv/{{team}}/configs/{{ env }}/maps/{{item}}"
-    dest: "{{ volume_path }}/{{item}}"
+    src: "/srv/{{team}}/configs/haproxy-{{item}}/{{ env }}/maps/{{item}}.map"
+    dest: "{{ volume_path }}/{{item}}.map"
   become: yes
   #ignore_errors: yes
   with_items:
-    - "rome.map"
-    - "olympus.map"
-    - "nexus.map"
-    - "spu.map"
-    - "legion.map"
-    - "nex3.map"
+    - "rome"
+    - "olympus"
+    - "nexus"
+    - "spu"
+    - "legion"
+    - "nex3"
 
 - name: Copy HAProxy Dockerfile Testlab.
   template:
