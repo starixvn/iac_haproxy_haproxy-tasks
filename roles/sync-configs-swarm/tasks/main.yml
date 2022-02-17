@@ -24,8 +24,8 @@
 ################ Set git repo
 - name: Checkout source code {{team}}
   git: 
-    repo: "git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-{{item}}.git"
-    dest: /srv/{{team}}/haproxy-{{item}}
+    repo: "git@gitlab.nexdev.net:NEXOPS/haproxy/{{item}}.git"
+    dest: /srv/{{team}}/{{item}}
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
@@ -34,13 +34,13 @@
   register: command_result
   delegate_to: localhost
   with_items:
-    - "default"
-    - "rome"
-    - "olympus"
-    - "nexus"
-    - "spu"
-    - "legion"
-    - "nex3"
+    - "haproxy-default"
+    - "haproxy-rome"
+    - "haproxy-olympus"
+    - "haproxy-nexus"
+    - "haproxy-spu"
+    - "haproxy-legion"
+    - "haproxy-nex3"
   when: team == "nexcel"
 ###Lumi
 - name: Checkout source code {{team}}
@@ -56,8 +56,8 @@
   delegate_to: localhost
   when: team == "luminet"
   with_items:
-    - "l1"
-    - "l2"
+    - "haproxy-l1"
+    - "haproxy-l2"
 
 - debug:
     var: command_result
@@ -71,13 +71,13 @@
     dest: "{{ volume_path }}/configs"
   become: yes
   with_items:
-    - "default"
-    - "rome"
-    - "olympus"
-    - "nexus"
-    - "spu"
-    - "legion"
-    - "nex3"
+    - "haproxy-default"
+    - "haproxy-rome"
+    - "haproxy-olympus"
+    - "haproxy-nexus"
+    - "haproxy-spu"
+    - "haproxy-legion"
+    - "haproxy-nex3"
   ignore_errors: yes
 
 - name: Build HAProxy configurations
