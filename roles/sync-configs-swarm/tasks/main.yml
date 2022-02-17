@@ -41,6 +41,7 @@
     - "haproxy-spu"
     - "haproxy-legion"
     - "haproxy-nex3"
+    - "haproxy-nexops"
   when: team == "nexcel"
 ###Lumi
 - name: Checkout source code {{team}}
@@ -78,6 +79,7 @@
     - "haproxy-spu"
     - "haproxy-legion"
     - "haproxy-nex3"
+    - "haproxy-nexops"
   ignore_errors: yes
 
 - name: Build HAProxy configurations
@@ -120,6 +122,7 @@
     - "spu"
     - "legion"
     - "nex3"
+    - "nexops"
 
 - name: Copy HAProxy Dockerfile Testlab.
   template:
