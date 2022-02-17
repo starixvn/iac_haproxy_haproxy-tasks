@@ -129,10 +129,16 @@
     dest: "{{ volume_path }}/configs"
   become: yes
 
-- name: Copy custom configuration {{ env }} {{team}}
+- name: Copy map configuration {{ env }} {{team}}
   template:
     src: "/srv/{{team}}/compiled/deploy/{{ env }}/hosts.map"
     dest: "{{ volume_path }}/maps/hosts.map"
+  become: yes
+
+- name: Copy special map configuration {{ env }} {{team}}
+  copy:
+    src: "/srv/{{team}}/compiled/tmp/{{ env }}/special-maps/*"
+    dest: "{{ volume_path }}/maps"
   become: yes
 
 - name: Copy whitelist configuration {{ env }} .
