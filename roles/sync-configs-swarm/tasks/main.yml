@@ -53,7 +53,7 @@
     update: yes
   become: yes
   run_once: true
-  register: command_result
+  #register: command_result
   delegate_to: localhost
   when: team == "luminet"
   with_items:
@@ -66,6 +66,19 @@
   become: yes
   run_once: true
 ############# HAProxy Configuration
+- name: Build HAProxy configurations
+  assemble:
+    src: "/srv/{{team}}/haproxy-*/configs/{{ env }}"
+    dest: "/srv/{{team}}/compiled/configs/{{ env }}/{{ config_filename }}"
+    regexp: "cfg$"
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
+- name: Exterminate
+  pause:
+    prompt: Press return to continue. Press Ctrl+c and then "a" to abort
+
 - name: Copy HAProxy configuration
   copy:
     src: "/srv/{{team}}/{{item}}/configs/{{ env }}"
@@ -80,13 +93,6 @@
     - "haproxy-legion"
     - "haproxy-nex3"
     - "haproxy-nexops"
-
-- name: Build HAProxy configurations
-  assemble:
-    src: "{{ volume_path }}/configs/{{ env }}"
-    dest: "{{ volume_path }}/{{ config_filename }}"
-    regexp: "cfg$"
-  become: yes
 
 - name: Copy whitelist configuration {{ env }} .
   when: env != "local"
@@ -110,7 +116,7 @@
 - name: Copy custom configuration {{ env }} {{team}}
   template:
     src: "/srv/{{team}}/haproxy-{{item}}/configs/{{ env }}/maps/{{item}}.map"
-    dest: "{{ volume_path }}/{{item}}.map"
+    dest: "{{ volume_path }}/maps/{{item}}.map"
   become: yes
   with_items:
     - "rome"
