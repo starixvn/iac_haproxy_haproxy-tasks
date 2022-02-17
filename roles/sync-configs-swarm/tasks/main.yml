@@ -109,7 +109,7 @@
 
 - name: Copy custom configuration {{ env }} {{team}}
   template:
-    src: "/srv/{{team}}/configs/haproxy-{{item}}/{{ env }}/maps/{{item}}.map"
+    src: "/srv/{{team}}/haproxy-{{item}}/configs/{{ env }}/maps/{{item}}.map"
     dest: "{{ volume_path }}/{{item}}.map"
   become: yes
   #ignore_errors: yes
