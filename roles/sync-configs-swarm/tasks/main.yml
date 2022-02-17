@@ -24,8 +24,8 @@
 ################ Set git repo
 - name: Checkout source code {{team}}
   git: 
-    repo: "git@gitlab.nexdev.net:NEXOPS/haproxy/{{item}}.git"
-    dest: /srv/{{team}}/{{item}}
+    repo: "git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-{{item}}.git"
+    dest: /srv/{{team}}/haproxy-{{item}}
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
