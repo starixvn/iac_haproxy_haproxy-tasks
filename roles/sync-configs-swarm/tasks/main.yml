@@ -6,6 +6,30 @@
     mode: "0777"
   become: yes
 
+- name: Create Deployment directory
+  file:
+    path: "{{item}}"
+    state: directory
+    mode: "0777"
+  become: yes
+  run_once: true
+  delegate_to: localhost
+  with_items:
+    - "/srv/{{team}}/compiled/tmp/{{ env }}"
+    - "/srv/{{team}}/compiled/deploy/{{ env }}"
+
+- name: Clean Deployment directory
+  file:
+    state: absent
+    path: "/srv/{{team}}/compiled"
+  become: yes
+  run_once: true
+  delegate_to: localhost
+  ignore_errors: yes
+  with_items:
+    - "/srv/{{team}}/compiled/tmp/{{ env }}"
+    - "/srv/{{team}}/compiled/deploy/{{ env }}"
+
 - name: Clean HAProxy config directory
   file:
     state: absent
