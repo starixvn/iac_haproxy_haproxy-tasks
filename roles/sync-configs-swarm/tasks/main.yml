@@ -1,10 +1,15 @@
 ##### Clean folder haproxy on Target servers
-- name: Create HAProxy directory
+- name: Clean Deployment directory
   file:
-    path: "{{ volume_path }}"
-    state: directory
-    mode: "0777"
+    state: absent
+    path: "/srv/{{team}}/compiled"
   become: yes
+  run_once: true
+  delegate_to: localhost
+  ignore_errors: yes
+  with_items:
+    - "/srv/{{team}}/compiled/tmp/{{ env }}"
+    - "/srv/{{team}}/compiled/deploy/{{ env }}"
 
 - name: Create Deployment directory
   file:
@@ -18,17 +23,12 @@
     - "/srv/{{team}}/compiled/tmp/{{ env }}"
     - "/srv/{{team}}/compiled/deploy/{{ env }}"
 
-- name: Clean Deployment directory
+- name: Create HAProxy directory
   file:
-    state: absent
-    path: "/srv/{{team}}/compiled"
+    path: "{{ volume_path }}"
+    state: directory
+    mode: "0777"
   become: yes
-  run_once: true
-  delegate_to: localhost
-  ignore_errors: yes
-  with_items:
-    - "/srv/{{team}}/compiled/tmp/{{ env }}"
-    - "/srv/{{team}}/compiled/deploy/{{ env }}"
 
 - name: Clean HAProxy config directory
   file:
