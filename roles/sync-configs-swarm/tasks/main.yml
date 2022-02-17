@@ -113,7 +113,7 @@
 - name: Build HAProxy Map configurations
   assemble:
     src: "/srv/{{team}}/compiled/tmp/{{ env }}/maps"
-    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/hosts.map"
+    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/hosts.map"
     regexp: "map$"
   become: yes
   run_once: true
@@ -127,6 +127,12 @@
   copy:
     src: "/srv/{{team}}/compiled/deploy/{{ env }}/{{ config_filename }}"
     dest: "{{ volume_path }}/configs"
+  become: yes
+
+- name: Copy custom configuration {{ env }} {{team}}
+  template:
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/hosts.map"
+    dest: "{{ volume_path }}/maps/hosts.map"
   become: yes
 
 - name: Copy whitelist configuration {{ env }} .
@@ -147,12 +153,6 @@
   with_items:
     - "{{cert_files}}"
   #ignore_errors: yes
-
-- name: Copy custom configuration {{ env }} {{team}}
-  template:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/hosts.map"
-    dest: "{{ volume_path }}/maps/hosts.map"
-  become: yes
 
 - name: Copy HAProxy Dockerfile Testlab.
   template:
