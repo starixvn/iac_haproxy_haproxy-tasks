@@ -101,6 +101,14 @@
   when: team == "nexcel"
   ignore_errors: yes
 
+- name: collect map configuration {{ env }} {{team}}
+  copy:
+    src: "/srv/{{team}}/compiled/tmp/{{ env }}/special-maps/"
+    dest: "/srv/{{team}}/compiled/deploy/{{ env }}"
+  become: yes
+  run_once: true
+  delegate_to: localhost
+
 - name: Build HAProxy configurations
   assemble:
     src: "/srv/{{team}}/compiled/tmp/{{ env }}"
@@ -137,7 +145,7 @@
 
 - name: Copy special map configuration {{ env }} {{team}}
   copy:
-    src: "/srv/{{team}}/compiled/tmp/{{ env }}/special-maps/"
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/"
     dest: "{{ volume_path }}/maps"
   become: yes
 
