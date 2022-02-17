@@ -23,19 +23,19 @@
     - "/srv/{{team}}/compiled/tmp/{{ env }}"
     - "/srv/{{team}}/compiled/deploy/{{ env }}"
 ##### Clean folder haproxy on Target servers
-- name: Create HAProxy directory
-  file:
-    path: "{{ volume_path }}"
-    state: directory
-    mode: "0755"
-  become: yes
-
 - name: Clean HAProxy config directory
   file:
     state: absent
     path: "{{ volume_path }}/configs"
   become: yes
   ignore_errors: yes
+
+- name: Create HAProxy directory
+  file:
+    path: "{{ volume_path }}"
+    state: directory
+    mode: "0755"
+  become: yes
 
 ################ Set git repo
 - name: Checkout source code {{team}}
