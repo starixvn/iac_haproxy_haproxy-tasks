@@ -90,22 +90,22 @@
 - name: Copy whitelist configuration {{ env }} .
   when: env != "local"
   template:
-    src: "/srv/{{team}}/{{item}}"
+    src: "/srv/{{team}}/haproxy-default/{{item}}"
     dest: "{{ volume_path }}/{{item}}"
   become: yes
   with_items:
     - whitelisted.ips
-  ignore_errors: yes
+  #ignore_errors: yes
 
 - name: Copy SSL Certs configuration {{ env }}
   when: env == "local" or env == "local_test"
   template:
-    src: "/srv/{{team}}/certs/{{item}}"
+    src: "/srv/{{team}}/haproxy-default/certs/{{item}}"
     dest: "{{ volume_path }}/{{item}}"
   become: yes
   with_items:
     - "{{cert_files}}"
-  ignore_errors: yes
+  #ignore_errors: yes
 
 - name: Copy custom configuration {{ env }} {{team}}
   template:
@@ -114,7 +114,12 @@
   become: yes
   #ignore_errors: yes
   with_items:
-    - "{{map_files}}"
+    - "rome.map"
+    - "olympus.map"
+    - "nexus.map"
+    - "spu.map"
+    - "legion.map"
+    - "nex3.map"
 
 - name: Copy HAProxy Dockerfile Testlab.
   template:
