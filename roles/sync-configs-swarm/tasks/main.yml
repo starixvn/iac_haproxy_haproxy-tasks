@@ -67,7 +67,7 @@
 ############# HAProxy Configuration
 - name: Copy HAProxy configuration
   copy:
-    src: "/srv/{{team}}/*/configs/{{ env }}"
+    src: "/srv/{{team}}/{{item}}/configs/{{ env }}"
     dest: "{{ volume_path }}/configs"
   become: yes
   with_items:
