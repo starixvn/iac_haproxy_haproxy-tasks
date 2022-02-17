@@ -34,9 +34,12 @@
   register: command_result
   delegate_to: localhost
   with_items:
+    - "default"
     - "rome"
     - "olympus"
     - "nexus"
+    - "spu"
+    - "legion"
   when: team == "nexcel"
 ###Lumi
 - name: Checkout source code {{team}}
