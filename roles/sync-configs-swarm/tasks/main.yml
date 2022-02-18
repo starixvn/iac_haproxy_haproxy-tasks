@@ -142,9 +142,9 @@
   become: yes
 
 - name: Copy map configuration {{ env }} {{team}}
-  template:
+  copy:
     src: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/"
-    dest: "{{ volume_path }}/maps/"
+    dest: "{{ volume_path }}/maps"
   become: yes
 
 - name: Copy whitelist configuration {{ env }} .
