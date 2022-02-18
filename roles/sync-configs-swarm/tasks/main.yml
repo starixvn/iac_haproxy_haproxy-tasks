@@ -32,10 +32,13 @@
 
 - name: Create HAProxy directory
   file:
-    path: "{{ volume_path }}"
+    path: "{{item}}"
     state: directory
     mode: "0755"
   become: yes
+  with_items:
+    - "{{ volume_path }}/configs"
+    - "{{ volume_path }}/maps"
 
 ################ Set git repo
 - name: Checkout source code {{team}}
