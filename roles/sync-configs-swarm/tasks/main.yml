@@ -134,7 +134,7 @@
 #  pause:
 #    prompt: Press return to continue. Press Ctrl+c and then "a" to abort
 ##########Target servers
-- name: Copy HAProxy configuration
+- name: Copy HAProxy cfg to target servers for testing
   copy:
     src: "/srv/{{team}}/compiled/deploy/{{ env }}/{{ config_filename }}"
     dest: "{{ volume_path }}/configs"
@@ -196,4 +196,10 @@
 
 - name: Check HAProxy config
   shell: docker run -it --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
+  become: yes
+
+- name: Copy HAProxy configuration
+  copy:
+    src: "{{ volume_path }}/configs/{{ config_filename }}"
+    dest: "{{ volume_path }}"
   become: yes
