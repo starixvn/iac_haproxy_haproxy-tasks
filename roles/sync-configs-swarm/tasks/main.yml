@@ -200,6 +200,6 @@
 
 - name: Copy HAProxy configuration
   copy:
-    src: "{{ volume_path }}/configs/{{ config_filename }}"
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/{{ config_filename }}"
     dest: "{{ volume_path }}"
   become: yes
