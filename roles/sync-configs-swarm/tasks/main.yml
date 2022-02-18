@@ -20,7 +20,8 @@
   run_once: true
   delegate_to: localhost
   with_items:
-    - "/srv/{{team}}/compiled/tmp/{{ env }}/configs"
+    - "/srv/{{team}}/compiled/tmp/{{ env }}"
+    - "/srv/{{team}}/compiled/deploy/{{ env }}/configs"
     - "/srv/{{team}}/compiled/deploy/{{ env }}/maps"
 ##### Clean folder haproxy on Target servers
 - name: Clean HAProxy config directory
