@@ -20,8 +20,8 @@
   run_once: true
   delegate_to: localhost
   with_items:
-    - "/srv/{{team}}/compiled/tmp/{{ env }}"
-    - "/srv/{{team}}/compiled/deploy/{{ env }}"
+    - "/srv/{{team}}/compiled/tmp/{{ env }}/configs"
+    - "/srv/{{team}}/compiled/deploy/{{ env }}/maps"
 ##### Clean folder haproxy on Target servers
 - name: Clean HAProxy config directory
   file:
@@ -107,7 +107,7 @@
 - name: collect map configuration {{ env }} {{team}}
   copy:
     src: "/srv/{{team}}/compiled/tmp/{{ env }}/special-maps/"
-    dest: "/srv/{{team}}/compiled/deploy/{{ env }}"
+    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/"
   become: yes
   run_once: true
   delegate_to: localhost
@@ -115,7 +115,7 @@
 - name: Build HAProxy configurations
   assemble:
     src: "/srv/{{team}}/compiled/tmp/{{ env }}"
-    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/{{ config_filename }}"
+    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
     regexp: "cfg$"
   become: yes
   run_once: true
@@ -124,7 +124,7 @@
 - name: Build HAProxy Map configurations
   assemble:
     src: "/srv/{{team}}/compiled/tmp/{{ env }}/maps"
-    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/hosts.map"
+    dest: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/hosts.map"
     regexp: "map$"
   become: yes
   run_once: true
@@ -136,20 +136,14 @@
 ##########Target servers
 - name: Copy HAProxy cfg to target servers for testing
   copy:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/{{ config_filename }}"
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
     dest: "{{ volume_path }}/configs"
   become: yes
 
 - name: Copy map configuration {{ env }} {{team}}
   template:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/hosts.map"
-    dest: "{{ volume_path }}/maps/hosts.map"
-  become: yes
-
-- name: Copy special map configuration {{ env }} {{team}}
-  copy:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/"
-    dest: "{{ volume_path }}/maps"
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/"
+    dest: "{{ volume_path }}/maps/"
   become: yes
 
 - name: Copy whitelist configuration {{ env }} .
@@ -200,6 +194,6 @@
 
 - name: Copy HAProxy configuration
   copy:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/{{ config_filename }}"
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
     dest: "{{ volume_path }}"
   become: yes
