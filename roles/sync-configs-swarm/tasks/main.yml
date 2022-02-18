@@ -140,7 +140,12 @@
     src: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
     dest: "{{ volume_path }}/configs"
   become: yes
-
+- name: Copy HAProxy configuration
+  copy:
+    src: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
+    dest: "{{ volume_path }}"
+  become: yes
+  
 - name: Copy map configuration {{ env }} {{team}}
   copy:
     src: "/srv/{{team}}/compiled/deploy/{{ env }}/maps/"
@@ -191,10 +196,4 @@
 
 - name: Check HAProxy config
   shell: docker run -it --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
-  become: yes
-
-- name: Copy HAProxy configuration
-  copy:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
-    dest: "{{ volume_path }}"
   become: yes
