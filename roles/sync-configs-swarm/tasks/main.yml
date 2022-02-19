@@ -27,6 +27,7 @@
 - name: Clean HAProxy config 
   shell: rm -R {{ volume_path }}/*
   become: yes
+  ignore_errors: yes
 
 - name: Clean HAProxy config directory
   file:
