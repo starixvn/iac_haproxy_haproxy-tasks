@@ -65,7 +65,7 @@
   when: team == "nexcel"
 
 - name: Checkout source code {{team}}
-  git: git@git3.nexdev.net:haproxy/haproxy-vg2.git
+  git:
     repo: "git@git3.nexdev.net:haproxy/{{item}}.git"
     dest: /srv/{{team}}/{{item}}
     key_file: "{{key_file}}"
