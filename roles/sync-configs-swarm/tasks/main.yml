@@ -2,7 +2,7 @@
 - name: Clean Deployment directory
   file:
     state: absent
-    path: "/srv/{{team}}/compiled"
+    path: "{{item}}"
   become: yes
   run_once: true
   delegate_to: localhost
@@ -27,7 +27,7 @@
 - name: Clean HAProxy config directory
   file:
     state: absent
-    path: "{{ volume_path }}/configs"
+    path: "{{ volume_path }}" #"{{ volume_path }}/configs"
   become: yes
   ignore_errors: yes
 
