@@ -28,6 +28,7 @@
   shell: rm -R {{ volume_path }}/*
   become: yes
   ignore_errors: yes
+  when: clean_working_dir is defined and clean_working_dir == "true"
 
 - name: Clean HAProxy config directory
   file:
