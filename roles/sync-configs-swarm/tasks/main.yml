@@ -24,6 +24,11 @@
     - "/srv/{{team}}/compiled/deploy/{{ env }}/configs"
     - "/srv/{{team}}/compiled/deploy/{{ env }}/maps"
 ##### Clean folder haproxy on Target servers
+- name: Clean HAProxy
+  shell: rm -R {{ volume_path }}/*
+  become: yes
+  ignore_errors: yes
+
 - name: Clean HAProxy config directory
   file:
     state: absent
