@@ -1,9 +1,9 @@
 ##### Clean Deployment directory
-- name: Set branch version for {{ env }}
-  set_fact:
-    branch_name: "HEAD"
-  when: env == "prod" or env == "prod-nex3"
-  become: yes
+#- name: Set branch version for {{ env }}
+#  set_fact:
+#    branch_name: "HEAD"
+#  when: env == "prod" or env == "prod-nex3"
+#  become: yes
 
 - name: Clean Deployment directory
   file:
@@ -61,7 +61,7 @@
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
-    version: "{{branch_name | default('dev')}}"
+    #version: "{{branch_name | default('dev')}}"
   become: yes
   run_once: true
   register: command_result
@@ -84,7 +84,7 @@
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
-    version: "{{branch_name | default('dev')}}"
+    #version: "{{branch_name | default('dev')}}"
   become: yes
   run_once: true
   #register: command_result
