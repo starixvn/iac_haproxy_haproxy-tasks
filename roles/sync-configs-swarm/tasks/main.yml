@@ -61,7 +61,7 @@
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
-    #version: "{{branch_name | default('dev')}}"
+    version: "{{branch_name | default('HEAD')}}"
   become: yes
   run_once: true
   register: command_result
@@ -84,7 +84,7 @@
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
-    #version: "{{branch_name | default('dev')}}"
+    version: "{{branch_name | default('HEAD')}}"
   become: yes
   run_once: true
   #register: command_result
