@@ -60,7 +60,7 @@
     dest: /srv/{{team}}/{{item}}
     key_file: "{{key_file}}"
     accept_hostkey: true
-    update: yes
+    #update: yes
     version: "{{branch_name | default('HEAD')}}"
   become: yes
   run_once: true
@@ -83,7 +83,7 @@
     dest: /srv/{{team}}/{{item}}
     key_file: "{{key_file}}"
     accept_hostkey: true
-    update: yes
+    #update: yes
     version: "{{branch_name | default('HEAD')}}"
   become: yes
   run_once: true
