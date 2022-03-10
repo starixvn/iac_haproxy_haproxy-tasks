@@ -194,7 +194,8 @@
 
 - name: Copy HAProxy Dockerfile Testlab.
   template:
-    src: "templates/{{team}}/check-config.Dockerfile_{{env}}.j2"
+    #src: "templates/{{team}}/check-config.Dockerfile_{{env}}.j2"
+    src: "templates/check-config.Dockerfile.j2"
     dest: "{{ volume_path }}/Dockerfile"
   become: yes
 
