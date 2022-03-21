@@ -12,6 +12,7 @@ COPY maps/l2-game-proxy.map {{image_config_path}}/maps/l2-game-proxy.map
 COPY nexdev.net.pem {{image_config_path}}/nexdev.net.pem
 COPY nexcel.vn.pem {{image_config_path}}/nexcel.vn.pem
 COPY maps/vg3-game-proxy.map {{image_config_path}}/maps/vg3-game-proxy.map
+COPY maps/alpha.map {{image_config_path}}/maps/alpha.map
 {% elif env == "uat" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/uat-vg3-game-proxy.map {{image_config_path}}/maps/uat-vg3-game-proxy.map
