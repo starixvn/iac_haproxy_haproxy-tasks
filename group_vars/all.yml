@@ -183,7 +183,7 @@ luminet_ports_prod:
     { "published": 8003, "target": 8003, "mode": "ingress" },
     { "published": 8004, "target": 8004, "mode": "ingress" },
     { "published": 8005, "target": 8005, "mode": "ingress" },
-    { "published": 8088, "target": 8088, "mode": "ingress" },
+    { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 8888, "target": 8888, "mode": "ingress" },
     { "published": 8889, "target": 8889, "mode": "ingress" },
     { "published": 8100, "target": 8100, "mode": "ingress" },
