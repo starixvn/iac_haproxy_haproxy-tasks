@@ -38,15 +38,7 @@ COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY l2-game-proxy.map {{image_config_path}}/l2-game-proxy.map
 {% elif env == "local" %}
 COPY lumigame.com.pem {{image_config_path}}/lumigame.com.pem
-COPY maps/l2-game-proxy.map {{image_config_path}}/maps/l2-game-proxy.map
-COPY maps/l2-game-proxy1.map {{image_config_path}}/maps/l2-game-proxy1.map
-COPY maps/l1-game-proxy2.map {{image_config_path}}/maps/l1-game-proxy2.map
-COPY maps/l1-game-proxy3.map {{image_config_path}}/maps/l1-game-proxy3.map
-COPY maps/l1-game-proxy1.map {{image_config_path}}/maps/l1-game-proxy1.map
-COPY maps/l1-game-proxy.map {{image_config_path}}/maps/l1-game-proxy.map
-COPY maps/l1-game-admin.map {{image_config_path}}/maps/l1-game-admin.map
-COPY maps/l1-game-admin1.map {{image_config_path}}/maps/l1-game-admin1.map
-COPY maps/l1-game-admin2.map {{image_config_path}}/maps/l1-game-admin2.map
+COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "uat" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/l2-game-proxy.map {{image_config_path}}/maps/l2-game-proxy.map
