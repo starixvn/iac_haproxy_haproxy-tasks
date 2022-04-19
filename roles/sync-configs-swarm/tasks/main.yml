@@ -94,6 +94,7 @@
     - "haproxy-default"
     - "haproxy-sc1"
     - "haproxy-vg2"
+    - "haproxy-vg3"
     - "haproxy-nexops"
 
 ############# HAProxy Configuration
@@ -127,6 +128,7 @@
     - "haproxy-default"
     - "haproxy-sc1"
     - "haproxy-vg2"
+    - "haproxy-vg3"
     - "haproxy-nexops"
   when: team == "luminet"
   ignore_errors: yes
