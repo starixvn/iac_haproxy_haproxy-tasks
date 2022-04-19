@@ -23,9 +23,15 @@ services:
       - {{swarm_network_nexops}}
     deploy:
         update_config:
+{% if env == "uat" or env == "sit" %}
+          order: stop-first
+          failure_action: rollback
+          delay: 10s
+{% else %}
           order: start-first
           failure_action: rollback
           delay: 10s
+{% endif %}
         rollback_config:
           parallelism: 0
           order: stop-first
