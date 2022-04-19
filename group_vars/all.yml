@@ -51,7 +51,7 @@ nexcel_ports_sit: [
 nexcel_ports_uat:
   [
     { "published": 7000, "target": 7000, "mode": "ingress" },
-    { "published": 80, "target": 80, "mode": "host" },
+    { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 1710, "target": 1710, "mode": "ingress" },
@@ -64,6 +64,9 @@ nexcel_ports_uat:
     { "published": 5323, "target": 5323, "mode": "ingress" },
     { "published": 7323, "target": 7323, "mode": "ingress" },
     { "published": 7320, "target": 7320, "mode": "ingress" },
+    { "published": 7681, "target": 7681, "mode": "ingress" }, #Legion
+    { "published": 7682, "target": 7682, "mode": "ingress" }, #Legion
+    { "published": 7685, "target": 7685, "mode": "ingress" }, #Legion
     { "published": 8783, "target": 8783, "mode": "ingress" },
     { "published": 8781, "target": 8781, "mode": "ingress" },
     { "published": 8782, "target": 8782, "mode": "ingress" },
