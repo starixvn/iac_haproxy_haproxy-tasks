@@ -104,7 +104,7 @@ nexcel_ports_prod:
     { "published": 6342, "target": 6342, "mode": "ingress" },
     { "published": 6344, "target": 6344, "mode": "ingress" },
     { "published": 6343, "target": 6343, "mode": "ingress" },
-    { "published": 6345, "target": 6345, "mode": "ingress" },
+    { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
     { "published": 8282, "target": 8282, "mode": "ingress" },
     { "published": 8788, "target": 8788, "mode": "ingress" },
   ]
