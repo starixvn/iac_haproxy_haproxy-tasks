@@ -184,7 +184,7 @@
   with_items:
     - whitelisted.ips
 
-- name: Copy SSL Certs configuration {{team}} {{ env }}
+- name: Copy SSL Certs configuration lumi {{ env }}
   when: team == "luminet" and env == "local" or team == "luminet" and env == "local_test"
   template:
     src: "/srv/{{team}}/haproxy-default/certs/{{item}}"
@@ -193,7 +193,7 @@
   with_items:
     - "{{luminet_cert_files}}"
 
-- name: Copy SSL Certs configuration {{team}} {{ env }}
+- name: Copy SSL Certs configuration nexcel {{ env }}
   when: team == "nexcel" and env == "local" or team == "nexcel" and env == "local_test"
   template:
     src: "/srv/{{team}}/haproxy-default/certs/{{item}}"
