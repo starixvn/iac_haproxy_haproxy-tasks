@@ -7,6 +7,14 @@ config_filename: haproxy.cfg
 image_config_path: /usr/local/etc/haproxy
 key_file: /root/.ssh/id_rsa
 
+nexcel_cert_files:
+- nexdev.net.pem
+- nexcel.vn.pem
+- nexcel.info.pem
+
+luminet_cert_files:
+- lumigame.com.pem
+
 nexcel_ports_local_test:
   [
     { "published": 80, "target": 80, "mode": "ingress" },
