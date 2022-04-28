@@ -191,7 +191,7 @@
     dest: "{{ volume_path }}/{{item}}"
   become: yes
   with_items:
-    - "{{cert_files}}"
+    - "{{team}}_{{cert_files}}"
   #ignore_errors: yes
 
 - name: Copy HAProxy Dockerfile Testlab.
