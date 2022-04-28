@@ -184,14 +184,23 @@
   with_items:
     - whitelisted.ips
 
-- name: Copy SSL Certs configuration {{ env }}
-  when: env == "local" or env == "local_test"
+- name: Copy SSL Certs configuration {{team}} {{ env }}
+  when: team == "luminet" and env == "local" or team == "luminet" and env == "local_test"
   template:
     src: "/srv/{{team}}/haproxy-default/certs/{{item}}"
     dest: "{{ volume_path }}/{{item}}"
   become: yes
   with_items:
-    - "{{team}}_cert_files"
+    - "{{luminet_cert_files}}"
+
+- name: Copy SSL Certs configuration {{team}} {{ env }}
+  when: team == "nexcel" and env == "local" or team == "nexcel" and env == "local_test"
+  template:
+    src: "/srv/{{team}}/haproxy-default/certs/{{item}}"
+    dest: "{{ volume_path }}/{{item}}"
+  become: yes
+  with_items:
+    - "{{nexcel_cert_files}}"
   #ignore_errors: yes
 
 - name: Copy HAProxy Dockerfile Testlab.
