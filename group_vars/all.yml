@@ -37,7 +37,7 @@ nexcel_ports_local:
     { "published": 8788, "target": 8788, "mode": "ingress" },
     { "published": 5673, "target": 5672, "mode": "ingress" }, #will change to 5672 later
     { "published": 5679, "target": 5679, "mode": "ingress" },
-    { "published": 5055, "target": 5055, "mode": "ingress" }, registry
+    { "published": 5055, "target": 5055, "mode": "ingress" }, #registry
   ]
 
 nexcel_ports_sit: [
