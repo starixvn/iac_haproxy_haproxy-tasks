@@ -43,6 +43,7 @@ nexcel_ports_local:
 nexcel_ports_nexprod: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
   ]
 
