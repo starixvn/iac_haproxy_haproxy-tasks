@@ -40,6 +40,12 @@ nexcel_ports_local:
     { "published": 5055, "target": 5055, "mode": "ingress" }, #registry
   ]
 
+nexcel_ports_nexprod: 
+  [
+    { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 8001, "target": 8001, "mode": "ingress" },
+  ]
+
 nexcel_ports_sit: [
     { "published": 80, "target": 80, "mode": "ingress" }, 
     { "published": 8001, "target": 8001, "mode": "ingress" },
@@ -151,7 +157,7 @@ nexcel_ports_aws-nex3:
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
-    ]
+  ]
 
 luminet_ports_local:
   [
