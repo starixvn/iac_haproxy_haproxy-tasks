@@ -131,7 +131,7 @@ nexcel_ports_aws:
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 8788, "target": 8788, "mode": "ingress" },
-    { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
+    #{ "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
     { "published": 63799, "target": 63799, "mode": "ingress" },
   ]
 
