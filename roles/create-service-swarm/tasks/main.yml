@@ -7,6 +7,14 @@
   ignore_errors: yes
   become: yes
 
+- name: Create network NexOps
+  docker_network:
+    name: "{{swarm_network_nexops}}"
+    driver: "overlay"
+    attachable: true
+  ignore_errors: yes
+  become: yes
+
 - name: Verify stacks directory exists (on first swarm node)
   #when: inventory_hostname == groups['haproxy'][0]
   file:
