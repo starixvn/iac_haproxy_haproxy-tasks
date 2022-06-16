@@ -19,7 +19,7 @@ COPY maps/vg3-game-proxy.map {{image_config_path}}/maps/vg3-game-proxy.map
 COPY maps/olympus-proxy.map {{image_config_path}}/maps/olympus-proxy.map
 COPY maps/alpha.map {{image_config_path}}/maps/alpha.map
 COPY maps/special-hosts.map {{image_config_path}}/maps/special-hosts.map
-COPY maps/special-hosts-1.map {{image_config_path}}/maps/special-hosts-1.map
+COPY special-maps/special-hosts-1.map {{image_config_path}}/maps/special-hosts-1.map
 {% elif env == "uat" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/uat-vg3-game-proxy.map {{image_config_path}}/maps/uat-vg3-game-proxy.map
