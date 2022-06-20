@@ -2,8 +2,20 @@
 # Variables here are applicable to all host groups
 haproxy_version: 2.4.16
 haproxy_image_name: registry.nexdev.net:5050/docker/haproxy/haproxy-debian
-nexcel_haproxy_image: hub.nexdev.net/base/haproxy/haproxy-debian
-luminet_haproxy_image: hub.lumigame.com/base/haproxy/haproxy-debian
+nexcel_haproxy_image_local: hub.nexdev.net
+nexcel_haproxy_image_local_test: hub.nexdev.net
+nexcel_haproxy_image_nexprod: hub.nexdev.net
+nexcel_haproxy_image_sit: nexhub.starixplay.com
+nexcel_haproxy_image_uat: nexhub.starixplay.com
+nexcel_haproxy_image_prod: nexhub.starixplay.com
+nexcel_haproxy_image_aws: nexhub.starixplay.com
+###
+luminet_haproxy_image_local: hub.lumigame.com
+luminet_haproxy_image_local_test: hub.lumigame.com
+luminet_haproxy_image_sit: lumhub.starixplay.com
+luminet_haproxy_image_uat: lumhub.starixplay.com
+luminet_haproxy_image_prod: lumhub.starixplay.com
+luminet_haproxy_image_aws: lumhub.starixplay.com
 
 stack_name: haproxy
 config_filename: haproxy.cfg

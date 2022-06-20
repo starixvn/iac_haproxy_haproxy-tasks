@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   service:
-    image: {{ lookup('vars', org + '_haproxy_image')}}:{{haproxy_version}}
+    image: {{ lookup('vars', org + '_haproxy_image_' + env)}}/base/haproxy/haproxy-debian:{{haproxy_version}}
     volumes:
       - data:{{image_config_path}}
       - "/etc/localtime:/etc/localtime:ro"
