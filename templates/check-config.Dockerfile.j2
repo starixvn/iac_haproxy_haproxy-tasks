@@ -1,4 +1,4 @@
-FROM {{ lookup('vars', org + '_haproxy_image_' + env)}}/base/haproxy/haproxy-debian:{{haproxy_version}}
+FROM {{ lookup('vars', org + '_haproxy_image_' + env)}}/haproxy/haproxy-debian:{{haproxy_version}}
 COPY configs/haproxy.cfg {{image_config_path}}/haproxy.cfg
 COPY maps/hosts.map {{image_config_path}}/maps/hosts.map
 {% if team == "nexcel" %}
