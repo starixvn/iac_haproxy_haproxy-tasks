@@ -99,7 +99,7 @@ nexcel_ports_uat:
     { "published": 7681, "target": 7681, "mode": "ingress" }, #Legion
     { "published": 7682, "target": 7682, "mode": "ingress" }, #Legion
     { "published": 7685, "target": 7685, "mode": "ingress" }, #Legion
-    { "published": 7403, "target": 7403, "mode": "ingress" }, #Rome
+    { "published": 7403, "target": 7403, "mode": "ingress" }, #Rome i1
     { "published": 7404, "target": 7404, "mode": "ingress" }, #Rome
     { "published": 7405, "target": 7405, "mode": "ingress" }, #Rome
     { "published": 7406, "target": 7406, "mode": "ingress" }, #Rome
@@ -109,6 +109,11 @@ nexcel_ports_uat:
     { "published": 7410, "target": 7410, "mode": "ingress" }, #Rome
     { "published": 7411, "target": 7411, "mode": "ingress" }, #Rome
     { "published": 7412, "target": 7412, "mode": "ingress" }, #Rome
+    { "published": 7423, "target": 7423, "mode": "ingress" }, #Rome i7
+    { "published": 7424, "target": 7424, "mode": "ingress" }, #Rome
+    { "published": 7425, "target": 7425, "mode": "ingress" }, #Rome
+    { "published": 7426, "target": 7426, "mode": "ingress" }, #Rome
+    { "published": 7427, "target": 7427, "mode": "ingress" }, #Rome
     { "published": 8783, "target": 8783, "mode": "ingress" },
     { "published": 8781, "target": 8781, "mode": "ingress" },
     { "published": 8782, "target": 8782, "mode": "ingress" },
