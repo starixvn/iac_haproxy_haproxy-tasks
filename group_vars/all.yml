@@ -5,7 +5,7 @@ haproxy_image_name: registry.nexdev.net:5050/docker/haproxy/haproxy-debian
 nexcel_haproxy_image_local: hub.nexdev.net/base
 nexcel_haproxy_image_local_test: hub.nexdev.net/base
 nexcel_haproxy_image_nexprod: hub.nexdev.net/base
-nexcel_haproxy_image_sit: registry.nexdev.net:5050/docker
+nexcel_haproxy_image_sit: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_uat: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_prod: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_aws: nexhub.starixplay.com/kbt/base
