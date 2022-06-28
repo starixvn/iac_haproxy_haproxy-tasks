@@ -148,9 +148,9 @@ nexcel_ports_prod:
     { "published": 8075, "target": 8075, "mode": "ingress" }, #Rome i7
     { "published": 8074, "target": 8074, "mode": "ingress" }, #Rome i11
     { "published": 8077, "target": 8077, "mode": "ingress" }, #Rome i11
-    { "published": 7012, "target": 7012, "mode": "ingress" }, #Rome staging i7
     { "published": 7011, "target": 7011, "mode": "ingress" }, #Rome staging i1
-    { "published": 7413, "target": 7413, "mode": "ingress" }, #Rome staging i11
+    { "published": 7012, "target": 7012, "mode": "ingress" }, #Rome staging i7
+    { "published": 7013, "target": 7013, "mode": "ingress" }, #Rome staging i11
     { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 1710, "target": 1710, "mode": "ingress" },
     { "published": 1711, "target": 1711, "mode": "ingress" },
