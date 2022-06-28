@@ -1,10 +1,4 @@
 ##### Clean Deployment directory
-#- name: Set branch version for {{ env }}
-#  set_fact:
-#    branch_name: "HEAD"
-#  when: env == "prod" or env == "prod-nex3"
-#  become: yes
-
 - name: Clean Deployment directory
   file:
     state: absent
@@ -229,6 +223,10 @@
 
 - name: Check HAProxy config
   shell: docker run -it --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
+  become: yes
+
+- name: backup {{ config_filename }}
+  shell: cp {{ volume_path }}/{{ config_filename }} {{ volume_path }}/configs/backup_{{ config_filename }}
   become: yes
 
 - name: Copy HAProxy configuration
