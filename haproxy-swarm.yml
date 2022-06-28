@@ -15,3 +15,9 @@
   roles:
     - role: create-service-swarm
   tags: update-haproxy-swarm-service
+
+- hosts: haproxy
+  roles:
+    - role: restore-backup-configs
+    - role: reload-configs-swarm
+  tags: restore-backup-configs
