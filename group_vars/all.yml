@@ -14,7 +14,7 @@ luminet_haproxy_image_local: hub.lumigame.com/base
 luminet_haproxy_image_local_test: hub.lumigame.com/base
 luminet_haproxy_image_sit: lumhub.starixplay.com/kbt/base
 luminet_haproxy_image_uat: lumhub.starixplay.com/kbt/base
-luminet_haproxy_image_prod: lumhub.starixplay.com/kbt/base
+luminet_haproxy_image_prod: registry.nexdev.net:5050/docker
 luminet_haproxy_image_aws: lumhub.starixplay.com/kbt/base
 
 stack_name: haproxy
