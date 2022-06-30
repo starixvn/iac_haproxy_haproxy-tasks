@@ -61,6 +61,8 @@ nexcel_ports_nexprod:
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
+    { "published": 42424, "target": 42424, "mode": "ingress" },
+    { "published": 8801, "target": 8801, "mode": "ingress" },
   ]
 
 nexcel_ports_sit: [
