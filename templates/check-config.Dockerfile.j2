@@ -35,6 +35,7 @@ COPY maps/olympus-proxy-tvs.map {{image_config_path}}/maps/olympus-proxy-tvs.map
 {% elif env == "prod" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/olympus-proxy-settle.map {{image_config_path}}/maps/olympus-proxy-settle.map
+COPY maps/olympus-proxy-tvs.map {{image_config_path}}/maps/olympus-proxy-tvs.map
 {% elif env == "prod-nex3" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/game-proxy.map {{image_config_path}}/maps/game-proxy.map
