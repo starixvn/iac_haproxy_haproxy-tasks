@@ -39,7 +39,7 @@ nexcel_ports_local_test:
     { "published": 1711, "target": 1711, "mode": "ingress" },
     { "published": 6343, "target": 6343, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
-    { "published": 7000, "target": 7000, "mode": "ingress" },
+    { "published": 7000, "target": 7000, "mode": "ingress" }, #
     { "published": 5555, "target": 5555, "mode": "ingress" },
   ]
 
