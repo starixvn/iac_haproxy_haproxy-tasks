@@ -41,6 +41,7 @@ services:
           max_attempts: 3
           window: 120s
         mode: global
+        endpoint_mode: dnsrr
         placement:
           constraints: 
             - node.labels.HAPROXY == yes
