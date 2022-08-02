@@ -225,9 +225,15 @@
   shell: docker run -it --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
   become: yes
 
+- name: Check if haproxy {{ volume_path }}/{{ config_filename }} file.
+  stat: path={{ volume_path }}/{{ config_filename }}
+  become: yes
+  register: haproxy_file_result
+
 - name: backup {{ config_filename }}
   shell: cp {{ volume_path }}/{{ config_filename }} {{ volume_path }}/configs/backup_{{ config_filename }}
   become: yes
+  when: haproxy_file_result.stat.exists
 
 - name: Copy HAProxy configuration
   copy:
