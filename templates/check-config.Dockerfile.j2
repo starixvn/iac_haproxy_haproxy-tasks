@@ -7,7 +7,7 @@ COPY maps/hosts.map {{image_config_path}}/maps/hosts.map
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY *.pem {{image_config_path}}/
 COPY maps/*.map {{image_config_path}}/maps/
-{% elif env == "nexprod" %}
+{% elif env == "nexprod" or env == "azure" %}
 COPY nexdev.net.pem {{image_config_path}}/nexdev.net.pem
 COPY nexcel.vn.pem {{image_config_path}}/nexcel.vn.pem
 COPY nexcel.info.pem {{image_config_path}}/nexcel.info.pem
