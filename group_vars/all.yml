@@ -8,7 +8,7 @@ nexcel_haproxy_image_nexprod: hub.nexdev.net/base
 nexcel_haproxy_image_sit: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_uat: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_prod: nexhub.starixplay.com/kbt/base
-nexcel_haproxy_image_aws: nexhub.starixplay.com/kbt/base
+nexcel_haproxy_image_aws: hub.nexdev.net/base
 nexcel_haproxy_image_azure: hub.nexdev.net/base
 ###
 luminet_haproxy_image_local: hub.lumigame.com/base
@@ -16,7 +16,7 @@ luminet_haproxy_image_local_test: hub.lumigame.com/base
 luminet_haproxy_image_sit: lumhub.starixplay.com/kbt/base
 luminet_haproxy_image_uat: lumhub.starixplay.com/kbt/base
 luminet_haproxy_image_prod: registry.nexdev.net:5050/docker
-luminet_haproxy_image_aws: lumhub.starixplay.com/kbt/base
+luminet_haproxy_image_aws: hub.lumigame.com/base
 
 stack_name: haproxy
 config_filename: haproxy.cfg
