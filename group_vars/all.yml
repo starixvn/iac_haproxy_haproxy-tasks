@@ -130,6 +130,7 @@ nexcel_ports_uat:
     { "published": 7681, "target": 7681, "mode": "ingress" }, #Legion
     { "published": 7682, "target": 7682, "mode": "ingress" }, #Legion
     { "published": 7685, "target": 7685, "mode": "ingress" }, #Legion
+    { "published": 7686, "target": 7686, "mode": "ingress" }, #legion
     { "published": 7403, "target": 7403, "mode": "ingress" }, #Rome i1
     { "published": 7404, "target": 7404, "mode": "ingress" }, #Rome
     { "published": 7405, "target": 7405, "mode": "ingress" }, #Rome
