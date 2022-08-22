@@ -162,6 +162,25 @@ nexcel_ports_uat:
     { "published": 6344, "target": 6344, "mode": "ingress" },
     { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
     { "published": 8788, "target": 8788, "mode": "ingress" },
+    { "published": 7203, "target": 7203, "mode": "ingress" }, #CN88.Setting.API
+    { "published": 5672, "target": 5672, "mode": "ingress" }, #RabbitMQ
+    { "published": 8091, "target": 8091, "mode": "ingress" }, #Couchbase
+    { "published": 6379, "target": 6379, "mode": "ingress" }, #Redis
+    { "published": 9099, "target": 9099, "mode": "ingress" }, #Logging.Service
+    { "published": 8889, "target": 8889, "mode": "ingress" }, #ONEbook.UM.API
+    { "published": 7200, "target": 7200, "mode": "ingress" }, #DCS.API
+    { "published": 7201, "target": 7201, "mode": "ingress" }, #DCS.Matrix.API
+    { "published": 7206, "target": 7206, "mode": "ingress" }, #DCS.StaticResources
+    { "published": 7207, "target": 7207, "mode": "ingress" }, #Fanex.RemotingRef.API
+    { "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
+    { "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
+    { "published": 7434, "target": 7434, "mode": "ingress" }, #Rome.Alpha.Announcements.API
+    { "published": 7572, "target": 7572, "mode": "ingress" }, #Nexus.N88.API
+    { "published": 7710, "target": 7710, "mode": "ingress" }, #SPU.CTS.Portal.API
+    { "published": 7623, "target": 7623, "mode": "ingress" }, #LAP.LOGGING.Site
+    { "published": 7627, "target": 7627, "mode": "ingress" }, #Sparta.LAP.LGAPI.Site
+    { "published": 7620, "target": 7620, "mode": "ingress" }, #Sparta.LAP.BETLIST.Site
+    { "published": 7705, "target": 7705, "mode": "ingress" }, #SPU.FraudSensor.Site
   ]
 
 nexcel_ports_prod:
