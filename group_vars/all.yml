@@ -10,6 +10,7 @@ nexcel_haproxy_image_uat: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_prod: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_aws: hub.nexdev.net/base
 nexcel_haproxy_image_azure: hub.nexdev.net/base
+nexcel_haproxy_image_agc: hub.nexdev.net/base
 ###
 luminet_haproxy_image_local: hub.lumigame.com/base
 luminet_haproxy_image_local_test: hub.lumigame.com/base
