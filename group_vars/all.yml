@@ -16,7 +16,7 @@ luminet_haproxy_image_local: hub.lumigame.com/base
 luminet_haproxy_image_local_test: hub.lumigame.com/base
 luminet_haproxy_image_sit: lumhub.starixplay.com/kbt/base
 luminet_haproxy_image_uat: lumhub.starixplay.com/kbt/base
-luminet_haproxy_image_prod: registry.nexdev.net:5050/docker
+luminet_haproxy_image_prod: lumhub.starixplay.com/kbt/base
 luminet_haproxy_image_aws: hub.lumigame.com/base
 
 stack_name: haproxy
@@ -217,7 +217,7 @@ nexcel_ports_prod:
     { "published": 42424, "target": 42424, "mode": "ingress" }, # NAP Session State
     { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis NAP
     { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis Alpha
-    { "published": 1710, "target": 1710, "mode": "ingress" },
+    { "published": 1710, "target": 1710, "mode": "ingress" }, #NAP.API
     { "published": 1711, "target": 1711, "mode": "ingress" },
     { "published": 7516, "target": 7516, "mode": "ingress" }, #Nexus saba
     { "published": 7515, "target": 7515, "mode": "ingress" }, #Nexus saba
@@ -230,6 +230,25 @@ nexcel_ports_prod:
     { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
     { "published": 8282, "target": 8282, "mode": "ingress" },
     { "published": 8788, "target": 8788, "mode": "ingress" }, #olympus_nap_api_netcore
+    { "published": 7577, "target": 7577, "mode": "ingress" }, #DCS.API
+    { "published": 7578, "target": 7578, "mode": "ingress" }, #DCS.Matrix.API
+    { "published": 7309, "target": 7309, "mode": "ingress" }, #LetstalkApiUrl
+    { "published": 8887, "target": 8887, "mode": "ingress" }, #UMThirdParty.API
+    { "published": 8889, "target": 8889, "mode": "ingress" }, #ONEBOOK.UM.API
+    { "published": 9099, "target": 9099, "mode": "ingress" }, #Logging.Service
+    { "published": 8888, "target": 8888, "mode": "ingress" }, #IP.Service
+    { "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
+    { "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
+    { "published": 6578, "target": 6578, "mode": "ingress" }, #Announcement.API
+    { "published": 7436, "target": 7436, "mode": "ingress" }, #Alpha.Copy.Customer.API
+    { "published": 7258, "target": 7258, "mode": "ingress" }, #Fanex.RemotingRef.API
+    { "published": 8086, "target": 8086, "mode": "ingress" }, #InfluxDB
+    { "published": 7614, "target": 7614, "mode": "ingress" }, #OIC.API
+    { "published": 1710, "target": 1710, "mode": "ingress" }, #NAP.API
+    { "published": 8890, "target": 8890, "mode": "ingress" }, #AutoPayout.API
+    { "published": 5672, "target": 5672, "mode": "ingress" }, #Rabbit MQ
+    { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service
+    { "published": 6379, "target": 6379, "mode": "ingress" }, #Redis
   ]
 
 nexcel_ports_aws:
@@ -330,7 +349,7 @@ luminet_ports_prod:
     { "published": 8313, "target": 8313, "mode": "ingress" },
     { "published": 8314, "target": 8314, "mode": "ingress" },
     { "published": 8315, "target": 8315, "mode": "ingress" },
-    { "published": 8316, "target": 8316, "mode": "ingress" },
+    { "published": 8316, "target": 8316, "mode": "ingress" }, 
   ]
 
 luminet_ports_aws:
