@@ -246,6 +246,7 @@ nexcel_ports_prod:
     { "published": 7614, "target": 7614, "mode": "ingress" }, #OIC.API
     { "published": 8890, "target": 8890, "mode": "ingress" }, #AutoPayout.API
     { "published": 5672, "target": 5672, "mode": "ingress" }, #Rabbit MQ
+    { "published": 15672, "target": 15672, "mode": "ingress" }, #Rabbit MQ
     { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service
     { "published": 6379, "target": 6379, "mode": "ingress" }, #Redis
   ]
