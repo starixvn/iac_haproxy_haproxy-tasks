@@ -249,6 +249,7 @@ nexcel_ports_prod:
     { "published": 15672, "target": 15672, "mode": "ingress" }, #Rabbit MQ
     { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service
     { "published": 6379, "target": 6379, "mode": "ingress" }, #Redis
+    { "published": 887, "target": 887, "mode": "ingress" }, #SPU.api.detecas
   ]
 
 nexcel_ports_aws:
