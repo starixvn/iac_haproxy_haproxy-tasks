@@ -7,8 +7,7 @@ nexcel_haproxy_image_local_test: hub.nexdev.net/base
 nexcel_haproxy_image_nexprod: hub.nexdev.net/base
 nexcel_haproxy_image_sit: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_uat: nexhub.starixplay.com/kbt/base
-nexcel_haproxy_image_prod: nexhub.starixplay.com/kbt/base
-#lumhub.starixplay.com/kbt/base
+nexcel_haproxy_image_prod: lumhub.starixplay.com/kbt/base
 #nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_aws: hub.nexdev.net/base
 nexcel_haproxy_image_azure: hub.nexdev.net/base
