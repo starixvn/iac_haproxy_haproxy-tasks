@@ -12,6 +12,8 @@ nexcel_haproxy_image_prod: lumhub.starixplay.com/kbt/base
 nexcel_haproxy_image_aws: hub.nexdev.net/base
 nexcel_haproxy_image_azure: hub.nexdev.net/base
 nexcel_haproxy_image_gc: hub.nexdev.net/base
+nexcel_haproxy_image_spuprod: nexhub.starixplay.com/kbt/base
+nexcel_haproxy_image_alphaprod: nexhub.starixplay.com/kbt/base
 ###
 luminet_haproxy_image_local: hub.lumigame.com/base
 luminet_haproxy_image_local_test: hub.lumigame.com/base
@@ -87,6 +89,21 @@ nexcel_ports_azure:
   ]
 
 nexcel_ports_gc: 
+  [
+    { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 443, "target": 443, "mode": "ingress" },
+  ]
+
+nexcel_ports_spuprod: 
+  [
+    { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 42424, "target": 42424, "mode": "ingress" },
+    { "published": 16379, "target": 16379, "mode": "ingress" },
+    { "published": 8002, "target": 8002, "mode": "ingress" },
+    { "published": 8088, "target": 8088, "mode": "ingress" },
+  ]
+
+nexcel_ports_alphaprod: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
