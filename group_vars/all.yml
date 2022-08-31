@@ -79,7 +79,7 @@ nexcel_ports_nexprod:
     { "published": 8801, "target": 8801, "mode": "ingress" },
   ]
 
-nexcel_ports_azure: 
+nexcel_ports_aws2: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
@@ -94,7 +94,7 @@ nexcel_ports_gc:
     { "published": 443, "target": 443, "mode": "host" },
   ]
 
-nexcel_ports_prod-fps: 
+nexcel_ports_prod_fps: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 42424, "target": 42424, "mode": "ingress" },
@@ -103,7 +103,7 @@ nexcel_ports_prod-fps:
     { "published": 8088, "target": 8088, "mode": "ingress" },
   ]
 
-nexcel_ports_prod-alpha: 
+nexcel_ports_prod_alpha: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 42424, "target": 42424, "mode": "ingress" },
