@@ -111,6 +111,18 @@ nexcel_ports_prod_alpha:
     { "published": 16389, "target": 16389, "mode": "ingress" },
     { "published": 8002, "target": 8002, "mode": "ingress" },
     { "published": 8088, "target": 8088, "mode": "ingress" },
+    { "published": 802, "target": 802, "mode": "ingress" }, #Rome bf i1
+    { "published": 803, "target": 803, "mode": "ingress" }, #Rome bf i7
+    { "published": 804, "target": 804, "mode": "ingress" }, #Rome bf i11
+    { "published": 8072, "target": 8072, "mode": "ingress" }, #Rome af i1
+    { "published": 8078, "target": 8078, "mode": "ingress" }, #Rome af i1
+    { "published": 8071, "target": 8071, "mode": "ingress" }, #Rome af i7
+    { "published": 8075, "target": 8075, "mode": "ingress" }, #Rome af i7
+    { "published": 8074, "target": 8074, "mode": "ingress" }, #Rome af i11
+    { "published": 8077, "target": 8077, "mode": "ingress" }, #Rome af i11
+    { "published": 7011, "target": 7011, "mode": "ingress" }, #Rome staging i1
+    { "published": 7012, "target": 7012, "mode": "ingress" }, #Rome staging i7
+    { "published": 7013, "target": 7013, "mode": "ingress" }, #Rome staging i11
   ]
 
 nexcel_ports_sit: [
