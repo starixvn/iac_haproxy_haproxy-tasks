@@ -16,29 +16,15 @@ COPY nexdev.net.pem {{image_config_path}}/nexdev.net.pem
 COPY nexcel.vn.pem {{image_config_path}}/nexcel.vn.pem
 COPY nexcel.info.pem {{image_config_path}}/nexcel.info.pem
 COPY maps/*.map {{image_config_path}}/maps/
-#COPY maps/vg3-game-proxy.map {{image_config_path}}/maps/vg3-game-proxy.map
-#COPY maps/olympus-proxy.map {{image_config_path}}/maps/olympus-proxy.map
-#COPY maps/olympus-proxy-tvs.map {{image_config_path}}/maps/olympus-proxy-tvs.map
-#COPY maps/olympus-proxy-riskcontrol.map {{image_config_path}}/maps/olympus-proxy-riskcontrol.map
-#COPY maps/alpha.map {{image_config_path}}/maps/alpha.map
-#COPY maps/nexops-path.map {{image_config_path}}/maps/nexops-path.map
-#COPY maps/special-hosts.map {{image_config_path}}/maps/special-hosts.map
-#COPY maps/special-hosts-1.map {{image_config_path}}/maps/special-hosts-1.map
 {% elif env == "uat" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
-COPY maps/uat-vg3-game-proxy.map {{image_config_path}}/maps/uat-vg3-game-proxy.map
-COPY maps/rome-alpha-i1.map {{image_config_path}}/maps/rome-alpha-i1.map
-COPY maps/rome-alpha-i7.map {{image_config_path}}/maps/rome-alpha-i7.map
-COPY maps/olympus-proxy-settle.map {{image_config_path}}/maps/olympus-proxy-settle.map
-COPY maps/olympus-proxy-tvs.map {{image_config_path}}/maps/olympus-proxy-tvs.map
+COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "sit" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
-COPY maps/olympus-proxy-settle.map {{image_config_path}}/maps/olympus-proxy-settle.map
-COPY maps/olympus-proxy-tvs.map {{image_config_path}}/maps/olympus-proxy-tvs.map
+COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "prod" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
-COPY maps/olympus-proxy-settle.map {{image_config_path}}/maps/olympus-proxy-settle.map
-COPY maps/olympus-proxy-tvs.map {{image_config_path}}/maps/olympus-proxy-tvs.map
+COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "gc" %}
 COPY certs {{image_config_path}}/certs/
 {% elif env == "prod-nex3" %}
