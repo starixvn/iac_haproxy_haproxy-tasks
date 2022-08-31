@@ -10,10 +10,10 @@ nexcel_haproxy_image_uat: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_prod: lumhub.starixplay.com/kbt/base
 #nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_aws: hub.nexdev.net/base
-nexcel_haproxy_image_azure: hub.nexdev.net/base
+nexcel_haproxy_image_aws2: hub.nexdev.net/base
 nexcel_haproxy_image_gc: hub.nexdev.net/base
-nexcel_haproxy_image_prod-fps: nexhub.starixplay.com/kbt/base
-nexcel_haproxy_image_prod-alpha: nexhub.starixplay.com/kbt/base
+nexcel_haproxy_image_prod_fps: nexhub.starixplay.com/kbt/base
+nexcel_haproxy_image_prod_alpha: nexhub.starixplay.com/kbt/base
 ###
 luminet_haproxy_image_local: hub.lumigame.com/base
 luminet_haproxy_image_local_test: hub.lumigame.com/base
