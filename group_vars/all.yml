@@ -10,7 +10,7 @@ nexcel_haproxy_image_uat: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_prod: lumhub.starixplay.com/kbt/base
 #nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_aws: hub.nexdev.net/base
-nexcel_haproxy_image_aws2: hub.nexdev.net/base
+nexcel_haproxy_image_nexaws: hub.nexdev.net/base
 nexcel_haproxy_image_gc: hub.nexdev.net/base
 nexcel_haproxy_image_fpsprod: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_alphaprod: nexhub.starixplay.com/kbt/base
@@ -79,7 +79,7 @@ nexcel_ports_nexprod:
     { "published": 8801, "target": 8801, "mode": "ingress" },
   ]
 
-nexcel_ports_aws2: 
+nexcel_ports_nexaws: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
