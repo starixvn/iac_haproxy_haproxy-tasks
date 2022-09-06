@@ -188,7 +188,7 @@
     - "{{luminet_cert_files}}"
 
 - name: Copy SSL Certs configuration nexcel {{ env }}
-  when: team == "nexcel" and env == "azure" or team == "nexcel" and env == "nexprod"  or team == "nexcel" and env == "local" or team == "nexcel" and env == "local_test"
+  when: team == "nexcel" and env == "nexawsre" or team == "nexcel" and env == "nexprod"  or team == "nexcel" and env == "local" or team == "nexcel" and env == "local_test"
   template:
     src: "/srv/{{team}}/haproxy-default/certs/{{item}}"
     dest: "{{ volume_path }}/{{item}}"
