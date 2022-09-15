@@ -170,7 +170,7 @@
   become: yes
 
 - name: Copy whitelist configuration {{ env }} .
-  when: env != "local"
+  when: env != "local" and env != "local_test"
   template:
     src: "/srv/{{team}}/haproxy-default/{{item}}"
     dest: "{{ volume_path }}/{{item}}"
