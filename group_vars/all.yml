@@ -212,9 +212,9 @@ nexcel_ports_uat:
     { "published": 7201, "target": 7201, "mode": "ingress" }, #DCS.Matrix.API
     { "published": 7206, "target": 7206, "mode": "ingress" }, #DCS.StaticResources
     { "published": 7207, "target": 7207, "mode": "ingress" }, #Fanex.RemotingRef.API
-    #{ "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
-    #{ "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
-    #{ "published": 7434, "target": 7434, "mode": "ingress" }, #Rome.Alpha.Announcements.API
+    { "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
+    { "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
+    { "published": 7434, "target": 7434, "mode": "ingress" }, #Rome.Alpha.Announcements.API
     #{ "published": 7572, "target": 7572, "mode": "ingress" }, #Nexus.N88.API
     #{ "published": 7710, "target": 7710, "mode": "ingress" }, #SPU.CTS.Portal.API
     #{ "published": 7623, "target": 7623, "mode": "ingress" }, #LAP.LOGGING.Site
