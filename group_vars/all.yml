@@ -37,14 +37,14 @@ luminet_cert_files:
 
 nexcel_ports_local_test:
   [
-    { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 80, "target": 80, "mode": "host" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 1710, "target": 1710, "mode": "host" },
     { "published": 16379, "target": 16379, "mode": "ingress" },
     { "published": 1711, "target": 1711, "mode": "host" },
     { "published": 6343, "target": 6343, "mode": "ingress" },
-    { "published": 443, "target": 443, "mode": "ingress" },
+    { "published": 443, "target": 443, "mode": "host" },
     { "published": 7000, "target": 7000, "mode": "ingress" }, #
     { "published": 5555, "target": 5555, "mode": "ingress" },
   ]
