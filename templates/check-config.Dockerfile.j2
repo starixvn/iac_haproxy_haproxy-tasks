@@ -32,6 +32,8 @@ COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/game-proxy.map {{image_config_path}}/maps/game-proxy.map
 {% elif env == "aws" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
+{% elif env == "nexaws" %}
+COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 {% elif env == "aws-nex3" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/game-proxy.map {{image_config_path}}/maps/game-proxy.map
