@@ -105,9 +105,10 @@ nexcel_ports_fpsprod:
 nexcel_ports_alphaprod: 
   [
     { "published": 80, "target": 80, "mode": "host" },
-    { "published": 42424, "target": 42424, "mode": "ingress" },
-    { "published": 16379, "target": 16379, "mode": "ingress" },
-    { "published": 16389, "target": 16389, "mode": "ingress" },
+    { "published": 42424, "target": 42424, "mode": "host" },
+    { "published": 42428, "target": 42428, "mode": "host" },
+    { "published": 16379, "target": 16379, "mode": "host" },
+    { "published": 16389, "target": 16389, "mode": "host" },
     { "published": 8002, "target": 8002, "mode": "host" },
     { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 802, "target": 802, "mode": "host" }, #Rome bf i1
