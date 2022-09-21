@@ -132,8 +132,8 @@ nexcel_ports_sit: [
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 42428, "target": 42428, "mode": "host" }, # Alpha Session State
     { "published": 42424, "target": 42424, "mode": "host" }, # NAP Session State
-    { "published": 16379, "target": 16379, "mode": "host" }, # Redis NAP
-    { "published": 16389, "target": 16389, "mode": "host" }, # Redis Alpha
+    { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis NAP
+    { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis Alpha
     { "published": 1710, "target": 1710, "mode": "ingress" },
     { "published": 1711, "target": 1711, "mode": "ingress" },
     { "published": 7680, "target": 7680, "mode": "ingress" },
