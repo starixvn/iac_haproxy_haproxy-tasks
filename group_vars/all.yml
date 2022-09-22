@@ -52,8 +52,8 @@ nexcel_ports_local_test:
 
 nexcel_ports_local:
   [
-    { "published": 80, "target": 80, "mode": "host" },
-    { "published": 443, "target": 443, "mode": "host" },
+    { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 6341, "target": 6341, "mode": "ingress" }, #public Internet telgram bots licbot,bot
     { "published": 6342, "target": 6342, "mode": "ingress" }, #public - restricted IPs crm_letstalk
@@ -96,7 +96,7 @@ nexcel_ports_gc:
 
 nexcel_ports_fpsprod: 
   [
-    { "published": 80, "target": 80, "mode": "host" },
+    { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 42424, "target": 42424, "mode": "ingress" },
     { "published": 16379, "target": 16379, "mode": "ingress" },
     { "published": 8002, "target": 8002, "mode": "ingress" },
@@ -105,7 +105,7 @@ nexcel_ports_fpsprod:
 
 nexcel_ports_alphaprod: 
   [
-    { "published": 80, "target": 80, "mode": "host" },
+    { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 42424, "target": 42424, "mode": "ingress" },
     { "published": 42428, "target": 42428, "mode": "ingress" },
     { "published": 16379, "target": 16379, "mode": "ingress" },
@@ -130,7 +130,7 @@ nexcel_ports_alphaprod:
   ]
 
 nexcel_ports_sit: [
-    { "published": 80, "target": 80, "mode": "host" }, 
+    { "published": 80, "target": 80, "mode": "ingress" }, 
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 42428, "target": 42428, "mode": "ingress" }, # Alpha Session State
@@ -154,7 +154,7 @@ nexcel_ports_sit: [
 nexcel_ports_uat:
   [
     { "published": 7000, "target": 7000, "mode": "ingress" },
-    { "published": 80, "target": 80, "mode": "host" },
+    { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 42428, "target": 42428, "mode": "ingress" }, # Alpha Session State
@@ -208,8 +208,6 @@ nexcel_ports_uat:
     { "published": 8788, "target": 8788, "mode": "ingress" }, #new NAP API
     { "published": 5672, "target": 5672, "mode": "ingress" }, #RabbitMQ
     { "published": 15672, "target": 15672, "mode": "ingress" }, #RabbitMQ Admin
-    #{ "published": 6379, "target": 6379, "mode": "ingress" }, #Redis
-    #{ "published": 9099, "target": 9099, "mode": "ingress" }, #Logging.Service
     { "published": 8889, "target": 8889, "mode": "ingress" }, #ONEbook.UM.API
     { "published": 7200, "target": 7200, "mode": "ingress" }, #DCS.API
     { "published": 7201, "target": 7201, "mode": "ingress" }, #DCS.Matrix.API
@@ -228,7 +226,7 @@ nexcel_ports_uat:
 
 nexcel_ports_prod:
   [
-    { "published": 80, "target": 80, "mode": "host" },
+    { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 8000, "target": 8000, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" }, #healthcheck haproxy
     { "published": 8002, "target": 8002, "mode": "ingress" }, #SPU
@@ -255,9 +253,9 @@ nexcel_ports_prod:
     { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis Alpha
     { "published": 1710, "target": 1710, "mode": "ingress" }, #NAP.API
     { "published": 1711, "target": 1711, "mode": "ingress" },
-    { "published": 7516, "target": 7516, "mode": "ingress" }, #Nexus saba
-    { "published": 7515, "target": 7515, "mode": "ingress" }, #Nexus saba
-    { "published": 7519, "target": 7519, "mode": "ingress" }, #Nexus saba
+    { "published": 7516, "target": 7516, "mode": "host" }, #Nexus saba
+    { "published": 7515, "target": 7515, "mode": "host" }, #Nexus saba
+    { "published": 7519, "target": 7519, "mode": "host" }, #Nexus saba
     { "published": 9009, "target": 9009, "mode": "ingress" },
     { "published": 6341, "target": 6341, "mode": "ingress" },
     { "published": 6342, "target": 6342, "mode": "ingress" },
@@ -283,7 +281,6 @@ nexcel_ports_prod:
     { "published": 5672, "target": 5672, "mode": "ingress" }, #Rabbit MQ
     { "published": 15672, "target": 15672, "mode": "ingress" }, #Rabbit MQ
     { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service
-    { "published": 6379, "target": 6379, "mode": "ingress" }, #Redis
     { "published": 887, "target": 887, "mode": "ingress" }, #SPU.api.detecas
   ]
 
