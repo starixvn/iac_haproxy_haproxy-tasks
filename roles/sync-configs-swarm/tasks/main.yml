@@ -170,13 +170,20 @@
   become: yes
 
 - name: Copy whitelist configuration {{ env }} .
-  when: env != "local" and env != "local_test"
+  when: env != "local" and env != "local_test" and env != "nexaws"
   template:
     src: "/srv/{{team}}/haproxy-default/{{item}}"
     dest: "{{ volume_path }}/{{item}}"
   become: yes
   with_items:
     - whitelisted.ips
+
+- name: Copy whitelist configuration {{ env }} .
+  when: env == "nexaws"
+  template:
+    src: "/srv/{{team}}/haproxy-default/nexcel.whitelisted.ips"
+    dest: "{{ volume_path }}/whitelisted.ips"
+  become: yes
 
 - name: Copy SSL Certs configuration lumi {{ env }}
   when: team == "luminet" and env == "local" or team == "luminet" and env == "local_test"
