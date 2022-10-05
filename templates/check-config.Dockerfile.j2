@@ -28,6 +28,8 @@ COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "gc" %}
 COPY certs {{image_config_path}}/certs/
+{% elif env == "nexaws" %}
+COPY certs {{image_config_path}}/certs/
 {% elif env == "prod-nex3" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/game-proxy.map {{image_config_path}}/maps/game-proxy.map
