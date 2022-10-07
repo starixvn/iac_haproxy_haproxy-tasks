@@ -325,7 +325,7 @@ nexcel_ports_aws-nex3:
 luminet_ports_local:
   [
     { "published": 80, "target": 80, "mode": "ingress" },
-    { "published": 8001, "target": 8001, "mode": "ingress" },
+    { "published": 8001, "target": 8001, "mode": "host" },
     { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 7000, "target": 7000, "mode": "ingress" },
     { "published": 7001, "target": 7001, "mode": "ingress" },
@@ -362,7 +362,7 @@ luminet_ports_uat:
 luminet_ports_prod:
   [
     { "published": 80, "target": 80, "mode": "ingress" },
-    { "published": 8001, "target": 8001, "mode": "ingress" }, #healthcheck haproxy
+    { "published": 8001, "target": 8001, "mode": "host" }, #healthcheck haproxy
     { "published": 8002, "target": 8002, "mode": "ingress" },
     { "published": 8003, "target": 8003, "mode": "ingress" },
     { "published": 8004, "target": 8004, "mode": "ingress" },
@@ -388,7 +388,7 @@ luminet_ports_prod:
 luminet_ports_aws:
   [
     { "published": 80, "target": 80, "mode": "ingress" },
-    { "published": 8001, "target": 8001, "mode": "ingress" },
+    { "published": 8001, "target": 8001, "mode": "host" },
     { "published": 9002, "target": 9002, "mode": "ingress" },
     { "published": 8080, "target": 8080, "mode": "ingress" },
   ]
