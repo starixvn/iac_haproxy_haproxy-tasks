@@ -27,7 +27,6 @@ COPY maps/*.map {{image_config_path}}/maps/
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "gc" %}
-COPY nexdev.net.pem {{image_config_path}}/nexdev.net.pem
 COPY certs {{image_config_path}}/certs/
 {% elif env == "nexaws" %}
 COPY certs {{image_config_path}}/certs/
