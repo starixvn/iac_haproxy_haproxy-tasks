@@ -16,7 +16,7 @@ nexcel_haproxy_image_gc: hub.nexdev.net/base
 nexcel_haproxy_image_fpsprod: nexhub.starixplay.com/kbt/base
 nexcel_haproxy_image_alphaprod: nexhub.starixplay.com/kbt/base
 ###
-luminet_haproxy_image_local: hub.nexdev.net/base
+luminet_haproxy_image_local: hub.lumigame.com/base
 luminet_haproxy_image_local_test: hub.lumigame.com/base
 luminet_haproxy_image_sit: lumhub.starixplay.com/kbt/base
 luminet_haproxy_image_uat: lumhub.starixplay.com/kbt/base
