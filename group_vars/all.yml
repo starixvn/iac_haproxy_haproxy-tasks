@@ -55,6 +55,7 @@ nexcel_ports_local:
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
+    { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 6341, "target": 6341, "mode": "ingress" }, #public Internet telgram bots licbot,bot
     { "published": 6342, "target": 6342, "mode": "ingress" }, #public - restricted IPs crm_letstalk
     { "published": 8787, "target": 8787, "mode": "ingress" },
@@ -74,6 +75,7 @@ nexcel_ports_local:
 nexcel_ports_nexprod: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
+    { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 42424, "target": 42424, "mode": "ingress" },
