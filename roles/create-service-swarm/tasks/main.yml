@@ -28,6 +28,12 @@
     dest: /home/{{ansible_user}}/stacks/haproxy-stack.yml
   become: yes
 
+- name: Pull HAProxy image
+  shell: |
+    cd /home/{{ansible_user}}/stacks
+    docker-compose -f haproxy-stack.yml pull
+  ignore_errors: yes
+
 - name: remove existed haproxy service
   when: inventory_hostname in groups['swarm_managers'] # and inventory_hostname == groups['haproxy'][0]
   shell: |
