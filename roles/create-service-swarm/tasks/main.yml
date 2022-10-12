@@ -1,20 +1,3 @@
-- name: Create network
-  docker_network:
-    name: "{{item}}"
-    driver: "overlay"
-    attachable: true
-  with_items: '{{swarm_networks}}'
-  ignore_errors: yes
-  become: yes
-
-- name: Create network NexOps
-  docker_network:
-    name: "{{swarm_network_nexops}}"
-    driver: "overlay"
-    attachable: true
-  ignore_errors: yes
-  become: yes
-
 - name: Verify stacks directory exists (on first swarm node)
   #when: inventory_hostname == groups['haproxy'][0]
   file:
@@ -40,6 +23,23 @@
     docker service rm haproxy_service
   run_once: true
   ignore_errors: yes
+
+- name: Create network
+  docker_network:
+    name: "{{item}}"
+    driver: "overlay"
+    attachable: true
+  with_items: '{{swarm_networks}}'
+  ignore_errors: yes
+  become: yes
+
+- name: Create network NexOps
+  docker_network:
+    name: "{{swarm_network_nexops}}"
+    driver: "overlay"
+    attachable: true
+  ignore_errors: yes
+  become: yes
 
 - name: Deploy haproxy service
   when: inventory_hostname in groups['swarm_managers'] # and inventory_hostname == groups['haproxy'][0]
