@@ -167,7 +167,6 @@ nexcel_ports_uat:
     { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis NAP
     { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis Alpha
     { "published": 1710, "target": 1710, "mode": "ingress" }, #NAP API
-    #{ "published": 1711, "target": 1711, "mode": "ingress" },
     { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 6012, "target": 6012, "mode": "ingress" }, #nex3
     { "published": 7012, "target": 7012, "mode": "ingress" }, #nex3
@@ -176,10 +175,6 @@ nexcel_ports_uat:
     { "published": 5323, "target": 5323, "mode": "ingress" }, #nex3
     { "published": 7323, "target": 7323, "mode": "ingress" }, #nex3
     { "published": 7320, "target": 7320, "mode": "ingress" }, #nex3
-    #{ "published": 7681, "target": 7681, "mode": "ingress" }, #Legion
-    #{ "published": 7682, "target": 7682, "mode": "ingress" }, #Legion
-    #{ "published": 7685, "target": 7685, "mode": "ingress" }, #Legion
-    #{ "published": 7686, "target": 7686, "mode": "ingress" }, #legion
     { "published": 7403, "target": 7403, "mode": "host" }, #Rome i1
     { "published": 7404, "target": 7404, "mode": "host" }, #Rome
     { "published": 7405, "target": 7405, "mode": "host" }, #Rome
@@ -205,10 +200,6 @@ nexcel_ports_uat:
     { "published": 7100, "target": 7100, "mode": "host" }, #nex3
     { "published": 8100, "target": 8100, "mode": "host" }, #nex3
     { "published": 8080, "target": 8080, "mode": "host" },
-    #{ "published": 7680, "target": 7680, "mode": "ingress" },
-    #{ "published": 6341, "target": 6341, "mode": "ingress" },
-    #{ "published": 6342, "target": 6342, "mode": "ingress" },
-    #{ "published": 6344, "target": 6344, "mode": "ingress" },
     { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
     { "published": 8788, "target": 8788, "mode": "ingress" }, #new NAP API
     { "published": 5672, "target": 5672, "mode": "ingress" }, #RabbitMQ
@@ -221,12 +212,6 @@ nexcel_ports_uat:
     { "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
     { "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
     { "published": 7434, "target": 7434, "mode": "ingress" }, #Rome.Alpha.Announcements.API
-    #{ "published": 7572, "target": 7572, "mode": "ingress" }, #Nexus.N88.API
-    #{ "published": 7710, "target": 7710, "mode": "ingress" }, #SPU.CTS.Portal.API
-    #{ "published": 7623, "target": 7623, "mode": "ingress" }, #LAP.LOGGING.Site
-    #{ "published": 7627, "target": 7627, "mode": "ingress" }, #Sparta.LAP.LGAPI.Site
-    #{ "published": 7620, "target": 7620, "mode": "ingress" }, #Sparta.LAP.BETLIST.Site
-    #{ "published": 7705, "target": 7705, "mode": "ingress" }, #SPU.FraudSensor.Site
   ]
 
 nexcel_ports_prod:
@@ -239,18 +224,6 @@ nexcel_ports_prod:
     { "published": 8004, "target": 8004, "mode": "ingress" }, #legion_lap_identity_server
     { "published": 8005, "target": 8005, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" }, #olympus_mail_service
-    #{ "published": 802, "target": 802, "mode": "host" }, #Rome bf i1
-    #{ "published": 803, "target": 803, "mode": "host" }, #Rome bf i7
-    #{ "published": 804, "target": 804, "mode": "host" }, #Rome bf i11
-    #{ "published": 8072, "target": 8072, "mode": "host" }, #Rome af i1
-    #{ "published": 8078, "target": 8078, "mode": "host" }, #Rome af i1
-    #{ "published": 8071, "target": 8071, "mode": "host" }, #Rome af i7
-    #{ "published": 8075, "target": 8075, "mode": "host" }, #Rome af i7
-    #{ "published": 8074, "target": 8074, "mode": "host" }, #Rome af i11
-    #{ "published": 8077, "target": 8077, "mode": "host" }, #Rome af i11
-    #{ "published": 7011, "target": 7011, "mode": "host" }, #Rome staging i1
-    #{ "published": 7012, "target": 7012, "mode": "host" }, #Rome staging i7
-    #{ "published": 7013, "target": 7013, "mode": "host" }, #Rome staging i11
     { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 42428, "target": 42428, "mode": "ingress" }, # Alpha Session State
     { "published": 42424, "target": 42424, "mode": "ingress" }, # NAP Session State
