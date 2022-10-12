@@ -239,18 +239,18 @@ nexcel_ports_prod:
     { "published": 8004, "target": 8004, "mode": "ingress" }, #legion_lap_identity_server
     { "published": 8005, "target": 8005, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" }, #olympus_mail_service
-    { "published": 802, "target": 802, "mode": "host" }, #Rome bf i1
-    { "published": 803, "target": 803, "mode": "host" }, #Rome bf i7
-    { "published": 804, "target": 804, "mode": "host" }, #Rome bf i11
-    { "published": 8072, "target": 8072, "mode": "host" }, #Rome af i1
-    { "published": 8078, "target": 8078, "mode": "host" }, #Rome af i1
-    { "published": 8071, "target": 8071, "mode": "host" }, #Rome af i7
-    { "published": 8075, "target": 8075, "mode": "host" }, #Rome af i7
-    { "published": 8074, "target": 8074, "mode": "host" }, #Rome af i11
-    { "published": 8077, "target": 8077, "mode": "host" }, #Rome af i11
-    { "published": 7011, "target": 7011, "mode": "host" }, #Rome staging i1
-    { "published": 7012, "target": 7012, "mode": "host" }, #Rome staging i7
-    { "published": 7013, "target": 7013, "mode": "host" }, #Rome staging i11
+    #{ "published": 802, "target": 802, "mode": "host" }, #Rome bf i1
+    #{ "published": 803, "target": 803, "mode": "host" }, #Rome bf i7
+    #{ "published": 804, "target": 804, "mode": "host" }, #Rome bf i11
+    #{ "published": 8072, "target": 8072, "mode": "host" }, #Rome af i1
+    #{ "published": 8078, "target": 8078, "mode": "host" }, #Rome af i1
+    #{ "published": 8071, "target": 8071, "mode": "host" }, #Rome af i7
+    #{ "published": 8075, "target": 8075, "mode": "host" }, #Rome af i7
+    #{ "published": 8074, "target": 8074, "mode": "host" }, #Rome af i11
+    #{ "published": 8077, "target": 8077, "mode": "host" }, #Rome af i11
+    #{ "published": 7011, "target": 7011, "mode": "host" }, #Rome staging i1
+    #{ "published": 7012, "target": 7012, "mode": "host" }, #Rome staging i7
+    #{ "published": 7013, "target": 7013, "mode": "host" }, #Rome staging i11
     { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 42428, "target": 42428, "mode": "ingress" }, # Alpha Session State
     { "published": 42424, "target": 42424, "mode": "ingress" }, # NAP Session State
@@ -274,7 +274,7 @@ nexcel_ports_prod:
     { "published": 7309, "target": 7309, "mode": "ingress" }, #LetstalkApiUrl
     { "published": 8887, "target": 8887, "mode": "ingress" }, #UMThirdParty.API
     { "published": 8889, "target": 8889, "mode": "ingress" }, #ONEBOOK.UM.API
-    { "published": 9099, "target": 9099, "mode": "ingress" }, #Logging.Service
+    #{ "published": 9099, "target": 9099, "mode": "ingress" }, #Logging.Service
     { "published": 8888, "target": 8888, "mode": "ingress" }, #IP.Service
     { "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
     { "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
