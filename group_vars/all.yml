@@ -113,6 +113,9 @@ nexcel_ports_alphaprod:
     { "published": 16379, "target": 16379, "mode": "ingress" },
     { "published": 16389, "target": 16389, "mode": "ingress" },
     { "published": 8002, "target": 8002, "mode": "host" },
+    { "published": 8003, "target": 8003, "mode": "host" },
+    { "published": 8004, "target": 8004, "mode": "host" },
+    { "published": 8005, "target": 8005, "mode": "host" },
     { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 802, "target": 802, "mode": "host" }, #Rome bf i1
     { "published": 803, "target": 803, "mode": "host" }, #Rome bf i7
