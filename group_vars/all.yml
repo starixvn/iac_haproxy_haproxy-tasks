@@ -102,6 +102,7 @@ nexcel_ports_fpsprod:
     { "published": 42424, "target": 42424, "mode": "ingress" },
     { "published": 16379, "target": 16379, "mode": "ingress" },
     { "published": 8002, "target": 8002, "mode": "ingress" },
+    { "published": 7715, "target": 7715, "mode": "ingress" },
     { "published": 7745, "target": 7745, "mode": "ingress" },
     { "published": 7746, "target": 7746, "mode": "ingress" },
     { "published": 7747, "target": 7747, "mode": "host" },
