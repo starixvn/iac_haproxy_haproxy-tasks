@@ -39,6 +39,7 @@ luminet_cert_files:
 nexcel_ports_local_test:
   [
     { "published": 80, "target": 80, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 1710, "target": 1710, "mode": "ingress" },
