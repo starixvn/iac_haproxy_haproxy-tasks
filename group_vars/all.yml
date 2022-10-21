@@ -138,6 +138,25 @@ nexcel_ports_alphaprod:
     { "published": 7011, "target": 7011, "mode": "host" }, #Rome staging i1
     { "published": 7012, "target": 7012, "mode": "host" }, #Rome staging i7
     { "published": 7013, "target": 7013, "mode": "host" }, #Rome staging i11
+    { "published": 8787, "target": 8787, "mode": "ingress" }, #olympus_mail_service
+    { "published": 8788, "target": 8788, "mode": "ingress" }, #olympus_nap_api_netcore
+    { "published": 7577, "target": 7577, "mode": "ingress" }, #DCS.API
+    { "published": 7578, "target": 7578, "mode": "ingress" }, #DCS.Matrix.API
+    { "published": 7309, "target": 7309, "mode": "ingress" }, #LetstalkApiUrl
+    { "published": 8887, "target": 8887, "mode": "ingress" }, #UMThirdParty.API
+    { "published": 8889, "target": 8889, "mode": "ingress" }, #ONEBOOK.UM.API
+    #{ "published": 9099, "target": 9099, "mode": "ingress" }, #Logging.Service
+    { "published": 8888, "target": 8888, "mode": "ingress" }, #IP.Service
+    { "published": 7431, "target": 7431, "mode": "ingress" }, #Rome.Chatbot.API
+    { "published": 7432, "target": 7432, "mode": "ingress" }, #Rome.Alpha.Services.API
+    { "published": 6578, "target": 6578, "mode": "ingress" }, #Announcement.API
+    { "published": 7436, "target": 7436, "mode": "ingress" }, #Alpha.Copy.Customer.API
+    { "published": 7258, "target": 7258, "mode": "ingress" }, #Fanex.RemotingRef.API
+    { "published": 7614, "target": 7614, "mode": "ingress" }, #OIC.API
+    { "published": 8890, "target": 8890, "mode": "ingress" }, #AutoPayout.API
+    { "published": 5672, "target": 5672, "mode": "ingress" }, #Rabbit MQ
+    { "published": 15672, "target": 15672, "mode": "ingress" }, #Rabbit MQ
+    { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service
   ]
 
 nexcel_ports_sit: [
@@ -237,9 +256,9 @@ nexcel_ports_prod:
     { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis Alpha
     { "published": 1710, "target": 1710, "mode": "ingress" }, #NAP.API
     { "published": 1711, "target": 1711, "mode": "ingress" },
-    { "published": 7516, "target": 7516, "mode": "host" }, #Nexus saba
-    { "published": 7515, "target": 7515, "mode": "host" }, #Nexus saba
-    { "published": 7519, "target": 7519, "mode": "host" }, #Nexus saba
+    #{ "published": 7516, "target": 7516, "mode": "host" }, #Nexus saba
+    #{ "published": 7515, "target": 7515, "mode": "host" }, #Nexus saba
+    #{ "published": 7519, "target": 7519, "mode": "host" }, #Nexus saba
     { "published": 9009, "target": 9009, "mode": "ingress" },
     { "published": 6341, "target": 6341, "mode": "ingress" },
     { "published": 6342, "target": 6342, "mode": "ingress" },
