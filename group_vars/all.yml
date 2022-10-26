@@ -67,6 +67,7 @@ nexcel_ports_local:
     { "published": 1710, "target": 1710, "mode": "ingress" }, # Redis
     { "published": 1711, "target": 1711, "mode": "ingress" },
     { "published": 6343, "target": 6343, "mode": "ingress" },
+    { "published": 6344, "target": 6344, "mode": "ingress" }, #public Internet epa_sms_website
     { "published": 8788, "target": 8788, "mode": "ingress" },
     { "published": 5673, "target": 5672, "mode": "ingress" }, #will change to 5672 later
     { "published": 5679, "target": 5679, "mode": "ingress" },
