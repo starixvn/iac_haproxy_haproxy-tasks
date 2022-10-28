@@ -39,7 +39,7 @@ luminet_cert_files:
 nexcel_ports_local_test:
   [
     { "published": 80, "target": 80, "mode": "host" },
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" },
     { "published": 1710, "target": 1710, "mode": "ingress" },
@@ -56,7 +56,7 @@ nexcel_ports_local:
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
     { "published": 6341, "target": 6341, "mode": "host" }, #public Internet telgram bots licbot,bot
     { "published": 6342, "target": 6342, "mode": "ingress" }, #public - restricted IPs crm_letstalk
     { "published": 8787, "target": 8787, "mode": "ingress" },
@@ -77,7 +77,7 @@ nexcel_ports_local:
 nexcel_ports_nexprod: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
     { "published": 443, "target": 443, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
     { "published": 42424, "target": 42424, "mode": "ingress" },
@@ -109,36 +109,36 @@ nexcel_ports_fpsprod:
     { "published": 7746, "target": 7746, "mode": "ingress" },
     { "published": 7747, "target": 7747, "mode": "host" },
     { "published": 7748, "target": 7748, "mode": "host" },
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
   ]
 
 nexcel_ports_alphaprod: 
   [
     { "published": 80, "target": 80, "mode": "ingress" },
-    { "published": 42424, "target": 42424, "mode": "ingress" },
-    { "published": 42428, "target": 42428, "mode": "ingress" },
-    { "published": 16379, "target": 16379, "mode": "ingress" },
-    { "published": 16389, "target": 16389, "mode": "ingress" },
+    { "published": 42424, "target": 42424, "mode": "ingress" }, # ASP state service
+    { "published": 42428, "target": 42428, "mode": "ingress" }, # ASP state service
+    { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis service
+    { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis service
     { "published": 8002, "target": 8002, "mode": "host" },
     { "published": 8003, "target": 8003, "mode": "host" },
     { "published": 8004, "target": 8004, "mode": "host" },
     { "published": 8005, "target": 8005, "mode": "host" },
-    { "published": 8088, "target": 8088, "mode": "host" },
-    { "published": 802, "target": 802, "mode": "host" }, #Rome bf i1
-    { "published": 803, "target": 803, "mode": "host" }, #Rome bf i7
-    { "published": 804, "target": 804, "mode": "host" }, #Rome bf i11
-    { "published": 821, "target": 821, "mode": "host" }, #Rome bf i1
-    { "published": 822, "target": 822, "mode": "host" }, #Rome bf i7
-    { "published": 823, "target": 823, "mode": "host" }, #Rome bf i11
-    { "published": 8072, "target": 8072, "mode": "host" }, #Rome af i1
-    { "published": 8078, "target": 8078, "mode": "host" }, #Rome af i1
-    { "published": 8071, "target": 8071, "mode": "host" }, #Rome af i7
-    { "published": 8075, "target": 8075, "mode": "host" }, #Rome af i7
-    { "published": 8074, "target": 8074, "mode": "host" }, #Rome af i11
-    { "published": 8077, "target": 8077, "mode": "host" }, #Rome af i11
-    { "published": 7011, "target": 7011, "mode": "host" }, #Rome staging i1
-    { "published": 7012, "target": 7012, "mode": "host" }, #Rome staging i7
-    { "published": 7013, "target": 7013, "mode": "host" }, #Rome staging i11
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
+    { "published": 802, "target": 802, "mode": "host" }, # bf i1
+    { "published": 803, "target": 803, "mode": "host" }, # bf i7
+    { "published": 804, "target": 804, "mode": "host" }, # bf i11
+    { "published": 821, "target": 821, "mode": "host" }, # asset i1
+    { "published": 822, "target": 822, "mode": "host" }, # asset i7
+    { "published": 823, "target": 823, "mode": "host" }, # asset i11
+    { "published": 8072, "target": 8072, "mode": "host" }, # af i1
+    { "published": 8078, "target": 8078, "mode": "host" }, # af i1
+    { "published": 8071, "target": 8071, "mode": "host" }, # af i7
+    { "published": 8075, "target": 8075, "mode": "host" }, # af i7
+    { "published": 8074, "target": 8074, "mode": "host" }, # af i11
+    { "published": 8077, "target": 8077, "mode": "host" }, # af i11
+    { "published": 7011, "target": 7011, "mode": "host" }, # staging i1
+    { "published": 7012, "target": 7012, "mode": "host" }, # staging i7
+    { "published": 7013, "target": 7013, "mode": "host" }, # staging i11
     { "published": 8787, "target": 8787, "mode": "ingress" }, #olympus_mail_service
     { "published": 8788, "target": 8788, "mode": "ingress" }, #olympus_nap_api_netcore
     { "published": 7577, "target": 7577, "mode": "ingress" }, #DCS.API
@@ -163,7 +163,7 @@ nexcel_ports_alphaprod:
 nexcel_ports_sit: [
     { "published": 80, "target": 80, "mode": "ingress" }, 
     { "published": 8001, "target": 8001, "mode": "ingress" },
-    { "published": 8787, "target": 8787, "mode": "ingress" },
+    { "published": 8787, "target": 8787, "mode": "ingress" }, #olympus_mail_service
     { "published": 42428, "target": 42428, "mode": "ingress" }, # Alpha Session State
     { "published": 42424, "target": 42424, "mode": "ingress" }, # NAP Session State
     { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis NAP
@@ -173,13 +173,9 @@ nexcel_ports_sit: [
     { "published": 7680, "target": 7680, "mode": "ingress" },
     { "published": 7685, "target": 7685, "mode": "ingress" }, #legion lap report
     { "published": 7686, "target": 7686, "mode": "ingress" }, #legion lap report
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
     { "published": 22222, "target": 22222, "mode": "ingress" },
-    { "published": 6341, "target": 6341, "mode": "ingress" },
-    { "published": 6342, "target": 6342, "mode": "ingress" },
-    { "published": 6344, "target": 6344, "mode": "ingress" },
-    { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
-    { "published": 8788, "target": 8788, "mode": "ingress" },
+    { "published": 8788, "target": 8788, "mode": "ingress" }, #olympus_nap_api_netcore
   ]
 
 nexcel_ports_uat:
@@ -193,7 +189,7 @@ nexcel_ports_uat:
     { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis NAP
     { "published": 16389, "target": 16389, "mode": "ingress" }, # Redis Alpha
     { "published": 1710, "target": 1710, "mode": "ingress" }, #NAP API
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
     { "published": 6012, "target": 6012, "mode": "ingress" }, #nex3
     { "published": 7012, "target": 7012, "mode": "ingress" }, #nex3
     { "published": 5321, "target": 5321, "mode": "ingress" }, #nex3
@@ -202,22 +198,22 @@ nexcel_ports_uat:
     { "published": 7323, "target": 7323, "mode": "ingress" }, #nex3
     { "published": 7320, "target": 7320, "mode": "ingress" }, #nex3
     { "published": 7403, "target": 7403, "mode": "host" }, #Rome i1
-    { "published": 7404, "target": 7404, "mode": "host" }, #Rome
-    { "published": 7405, "target": 7405, "mode": "host" }, #Rome
-    { "published": 7406, "target": 7406, "mode": "host" }, #Rome
-    { "published": 7407, "target": 7407, "mode": "host" }, #Rome
-    { "published": 7408, "target": 7408, "mode": "host" }, #Rome
-    { "published": 7409, "target": 7409, "mode": "host" }, #Rome
-    { "published": 7410, "target": 7410, "mode": "host" }, #Rome
-    { "published": 7411, "target": 7411, "mode": "host" }, #Rome
-    { "published": 7412, "target": 7412, "mode": "host" }, #Rome
-    { "published": 7466, "target": 7466, "mode": "host" }, #Rome
+    { "published": 7404, "target": 7404, "mode": "host" }, #Rome i1
+    { "published": 7405, "target": 7405, "mode": "host" }, #Rome i1
+    { "published": 7406, "target": 7406, "mode": "host" }, #Rome i1
+    { "published": 7407, "target": 7407, "mode": "host" }, #Rome i1
+    { "published": 7408, "target": 7408, "mode": "host" }, #Rome i1
+    { "published": 7409, "target": 7409, "mode": "host" }, #Rome i1
+    { "published": 7410, "target": 7410, "mode": "host" }, #Rome i1
+    { "published": 7411, "target": 7411, "mode": "host" }, #Rome i1
+    { "published": 7412, "target": 7412, "mode": "host" }, #Rome i1
+    { "published": 7466, "target": 7466, "mode": "host" }, #Rome i1
     { "published": 7423, "target": 7423, "mode": "host" }, #Rome i7
-    { "published": 7424, "target": 7424, "mode": "host" }, #Rome
-    { "published": 7425, "target": 7425, "mode": "host" }, #Rome
-    { "published": 7426, "target": 7426, "mode": "host" }, #Rome
-    { "published": 7427, "target": 7427, "mode": "host" }, #Rome
-    { "published": 7465, "target": 7465, "mode": "host" }, #Rome
+    { "published": 7424, "target": 7424, "mode": "host" }, #Rome i7
+    { "published": 7425, "target": 7425, "mode": "host" }, #Rome i7
+    { "published": 7426, "target": 7426, "mode": "host" }, #Rome i7
+    { "published": 7427, "target": 7427, "mode": "host" }, #Rome i7
+    { "published": 7465, "target": 7465, "mode": "host" }, #Rome i7
     { "published": 8783, "target": 8783, "mode": "host" }, #nex3
     { "published": 8781, "target": 8781, "mode": "host" }, #nex3
     { "published": 8782, "target": 8782, "mode": "host" }, #nex3
@@ -225,7 +221,7 @@ nexcel_ports_uat:
     { "published": 5120, "target": 5120, "mode": "host" }, #nex3
     { "published": 7100, "target": 7100, "mode": "host" }, #nex3
     { "published": 8100, "target": 8100, "mode": "host" }, #nex3
-    { "published": 8080, "target": 8080, "mode": "host" },
+    { "published": 8080, "target": 8080, "mode": "host" }, # HAproxy stats
     { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
     { "published": 8788, "target": 8788, "mode": "ingress" }, #new NAP API
     { "published": 5672, "target": 5672, "mode": "ingress" }, #RabbitMQ
@@ -250,7 +246,7 @@ nexcel_ports_prod:
     { "published": 8004, "target": 8004, "mode": "ingress" }, #legion_lap_identity_server
     { "published": 8005, "target": 8005, "mode": "ingress" },
     { "published": 8787, "target": 8787, "mode": "ingress" }, #olympus_mail_service
-    { "published": 8088, "target": 8088, "mode": "host" },
+    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
     { "published": 42428, "target": 42428, "mode": "ingress" }, # Alpha Session State
     { "published": 42424, "target": 42424, "mode": "ingress" }, # NAP Session State
     { "published": 16379, "target": 16379, "mode": "ingress" }, # Redis NAP
