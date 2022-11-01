@@ -105,7 +105,7 @@ nexcel_ports_fpsprod:
     { "published": 8002, "target": 8002, "mode": "ingress" },
     { "published": 7715, "target": 7715, "mode": "ingress" },
     { "published": 7745, "target": 7745, "mode": "ingress" },
-    { "published": 7746, "target": 7746, "mode": "ingress" },
+    { "published": 7746, "target": 7746, "mode": "ingress" }, # internal for ws.detecas.com
     { "published": 7747, "target": 7747, "mode": "host" },
     { "published": 7748, "target": 7748, "mode": "host" },
     { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
