@@ -29,8 +29,8 @@ key_file: /root/.ssh/id_rsa
 
 nexcel_cert_files:
 - nexdev.net.pem
-- nexcel.vn.pem
-- nexcel.info.pem
+- starixnet.com.pem
+#- nexcel.info.pem
 
 luminet_cert_files:
 - lumigame.com.pem
