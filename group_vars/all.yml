@@ -374,13 +374,13 @@ luminet_ports_prod:
     { "published": 8303, "target": 8303, "mode": "ingress" },
     { "published": 8304, "target": 8304, "mode": "ingress" },
     { "published": 8305, "target": 8305, "mode": "ingress" },
-    { "published": 8110, "target": 8110, "mode": "ingress" },
-    { "published": 8310, "target": 8310, "mode": "ingress" },
+    { "published": 8110, "target": 8110, "mode": "ingress" }, #need check to remove this port
+    { "published": 8310, "target": 8310, "mode": "ingress" }, #need check to remove this port
     { "published": 8311, "target": 8311, "mode": "host" },
-    { "published": 8313, "target": 8313, "mode": "ingress" },
+    { "published": 8313, "target": 8313, "mode": "ingress" }, #need check to remove this port
     { "published": 8314, "target": 8314, "mode": "ingress" },
     { "published": 8315, "target": 8315, "mode": "ingress" },
-    { "published": 8316, "target": 8316, "mode": "ingress" }, 
+    #{ "published": 8316, "target": 8316, "mode": "ingress" }, #need check to remove this port
   ]
 
 luminet_ports_aws:
