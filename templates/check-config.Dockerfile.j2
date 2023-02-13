@@ -54,7 +54,7 @@ COPY lumigame.com.pem {{image_config_path}}/lumigame.com.pem
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
 COPY l2-game-proxy.map {{image_config_path}}/l2-game-proxy.map
 {% elif env == "local" %}
-COPY lumigame.com.pem {{image_config_path}}/lumigame.com.pem
+COPY *.pem {{image_config_path}}/
 COPY maps/*.map {{image_config_path}}/maps/
 {% elif env == "uat" %}
 COPY whitelisted.ips {{image_config_path}}/whitelisted.ips
