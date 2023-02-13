@@ -34,6 +34,7 @@ nexcel_cert_files:
 
 luminet_cert_files:
 - lumigame.com.pem
+- luminetsoft.com.pem
 
 nexcel_ports_local_test:
   [
