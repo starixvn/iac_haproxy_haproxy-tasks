@@ -179,7 +179,7 @@
     - whitelisted.ips
 
 - name: Copy whitelist configuration {{ env }} .
-  when: env == "nexaws"
+  when: env == "nexaws" or env == "gc"
   template:
     src: "/srv/{{team}}/haproxy-default/nexcel.whitelisted.ips"
     dest: "{{ volume_path }}/whitelisted.ips"
