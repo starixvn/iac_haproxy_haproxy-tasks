@@ -286,14 +286,26 @@ nexcel_ports_aws:
   [
     { "published": 80, "target": 80, "mode": "ingress" },
     { "published": 8001, "target": 8001, "mode": "ingress" },
+    { "published": 8002, "target": 8002, "mode": "host" },
+    { "published": 8003, "target": 8003, "mode": "host" },
+    { "published": 8004, "target": 8004, "mode": "host" },
+    { "published": 8005, "target": 8005, "mode": "host" },
     { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
-    { "published": 7680, "target": 7680, "mode": "ingress" }, # Legion
-    { "published": 7685, "target": 7685, "mode": "ingress" }, # Legion
-    { "published": 8787, "target": 8787, "mode": "ingress" },
-    { "published": 8788, "target": 8788, "mode": "ingress" },
-    { "published": 6345, "target": 6345, "mode": "ingress" }, #specicaldelete internal
-    { "published": 16379, "target": 16379, "mode": "ingress" },
-    { "published": 16389, "target": 16389, "mode": "ingress" },
+    { "published": 802, "target": 802, "mode": "host" }, # bf i1
+    { "published": 803, "target": 803, "mode": "host" }, # bf i7
+    { "published": 804, "target": 804, "mode": "host" }, # bf i11
+    { "published": 821, "target": 821, "mode": "host" }, # asset i1
+    { "published": 822, "target": 822, "mode": "host" }, # asset i7
+    { "published": 823, "target": 823, "mode": "host" }, # asset i11
+    { "published": 8072, "target": 8072, "mode": "host" }, # af i1
+    { "published": 8078, "target": 8078, "mode": "host" }, # af i1
+    { "published": 8071, "target": 8071, "mode": "host" }, # af i7
+    { "published": 8075, "target": 8075, "mode": "host" }, # af i7
+    { "published": 8074, "target": 8074, "mode": "host" }, # af i11
+    { "published": 8077, "target": 8077, "mode": "host" }, # af i11
+    { "published": 7011, "target": 7011, "mode": "host" }, # staging i1
+    { "published": 7012, "target": 7012, "mode": "host" }, # staging i7
+    { "published": 7013, "target": 7013, "mode": "host" }, # staging i11
   ]
 
 nexcel_ports_prod-nex3:
