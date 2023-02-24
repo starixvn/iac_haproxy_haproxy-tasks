@@ -122,8 +122,8 @@ nexcel_ports_alphaprod:
     { "published": 8002, "target": 8002, "mode": "host" },
     { "published": 8003, "target": 8003, "mode": "host" },
     { "published": 8004, "target": 8004, "mode": "host" },
-    { "published": 8005, "target": 8005, "mode": "host" },
-    { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
+    { "published": 8005, "target": 8005, "mode": "host" }, # CN88
+    { "published": 8088, "target": 8088, "mode": "host" }, # Office IPs
     { "published": 802, "target": 802, "mode": "host" }, # bf i1
     { "published": 803, "target": 803, "mode": "host" }, # bf i7
     { "published": 804, "target": 804, "mode": "host" }, # bf i11
