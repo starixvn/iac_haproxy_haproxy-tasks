@@ -83,13 +83,8 @@
   shell: docker run -it --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
   become: yes
 
-- name: Check if haproxy {{ volume_path }}/{{ config_filename }} file.
-  stat: path={{ volume_path }}/{{ config_filename }}
-  become: yes
-  register: haproxy_file_result
-
 - name: Copy HAProxy configuration
   copy:
-    src: "/srv/{{team}}/compiled/deploy/{{ env }}/configs/{{ config_filename }}"
+    src: "/srv/compiled/haproxy/{{org}}/{{ env }}/configs/{{ config_filename }}"
     dest: "{{ volume_path }}"
   become: yes
