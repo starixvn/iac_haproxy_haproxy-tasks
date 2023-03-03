@@ -19,7 +19,7 @@
   run_once: true
   delegate_to: localhost
   with_items:
-    - "/srv/compiled"
+    - "/srv/compiled/haproxy"
 ##### Clean folder haproxy on Target servers
 - name: Clean HAProxy working_dir
   shell: rm -R {{ volume_path }}/*
@@ -50,7 +50,7 @@
 #    prompt: Press return to continue. Press Ctrl+c and then "a" to abort
 ##########Target servers
 - name: Copy HAProxy cfg to target servers for testing
-  copy:
+  copy: 
     src: "/srv/compiled/haproxy/{{org}}/{{ env }}/"
     dest: "{{ volume_path }}/"
   become: yes
