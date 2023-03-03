@@ -19,7 +19,7 @@
   run_once: true
   delegate_to: localhost
   with_items:
-    - "/srv/compiled/haproxy"
+    - "/srv/compiled"
 ##### Clean folder haproxy on Target servers
 - name: Clean HAProxy working_dir
   shell: rm -R {{ volume_path }}/*
@@ -31,7 +31,7 @@
 - name: Checkout source code
   git: 
     repo: "git@gitlab.starixsoft.com:compiled/haproxy.git"
-    dest: /srv/compiled
+    dest: /srv/compiled/haproxy
     key_file: "{{key_file}}"
     accept_hostkey: true
     update: yes
