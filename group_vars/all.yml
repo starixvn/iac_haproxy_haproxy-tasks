@@ -169,7 +169,7 @@ nexcel_ports_sit: [
     { "published": 7685, "target": 7685, "mode": "ingress" }, #legion lap report
     { "published": 7686, "target": 7686, "mode": "ingress" }, #legion lap report
     { "published": 8088, "target": 8088, "mode": "host" }, # HAproxy stats
-    { "published": 22222, "target": 22222, "mode": "ingress" },
+    # { "published": 22222, "target": 22222, "mode": "ingress" },
     { "published": 8788, "target": 8788, "mode": "ingress" }, #olympus_nap_api_netcore
     { "published": 6345, "target": 6345, "mode": "ingress" }, #olympus_specicaldelete internal
 
