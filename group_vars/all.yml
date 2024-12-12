@@ -152,7 +152,7 @@ nexcel_ports_alphaprod: [
     { "published": 8890, "target": 8890, "mode": "ingress" }, #AutoPayout.API
     { "published": 5672, "target": 5672, "mode": "ingress" }, #Rabbit MQ
     { "published": 15672, "target": 15672, "mode": "ingress" }, #Rabbit MQ
-    { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service
+    { "published": 8585, "target": 8585, "mode": "ingress" }, #Fanex.Email.Service 
   ]
 
 nexcel_ports_sit: [
