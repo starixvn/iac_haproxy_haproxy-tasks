@@ -172,6 +172,7 @@ nexcel_ports_sit: [
     # { "published": 22222, "target": 22222, "mode": "ingress" },
     { "published": 8788, "target": 8788, "mode": "ingress" }, #olympus_nap_api_netcore
     { "published": 6345, "target": 6345, "mode": "ingress" }, #olympus_specicaldelete internal
+    { "published": 8200, "target": 8200, "mode": "host" }, #vault service
 
   ]
 
